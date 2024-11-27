@@ -9,8 +9,11 @@ https://docs.djangoproject.com/en/5.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.1/ref/settings/
 """
-
+import os
 from pathlib import Path
+from dotenv import load_dotenv
+
+load_dotenv() 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -20,12 +23,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-4)5ike@%$jj8ef2dr_*-h-6d=d5z5&+f_&lb3dqeho@^5ht^5_'
+SECRET_KEY = os.environ.get("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = bool(os.environ.get("DEBUG", default=0))
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = os.environ.get("DJANGO_ALLOWED_HOSTS").split(" ")
 
 
 # Application definition
@@ -118,13 +121,14 @@ USE_TZ = True
 # URL to use when referring to static files
 STATIC_URL = '/static/'
 
-# Directory where static files will be collected (useful in production)
-STATIC_ROOT = BASE_DIR / 'staticfiles'
+# Directory where collected static files will be stored during deployment
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
-# Additional directories to search for static files
+# Directories where Django will search for additional static files during development
 STATICFILES_DIRS = [
-    BASE_DIR / 'static',  # Assumes you create a 'static' folder in your project root
+    os.path.join(BASE_DIR, 'static'),
 ]
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
@@ -136,6 +140,6 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'  # Google's SMTP server
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-EMAIL_HOST_USER = 'michael@cebba.org'  # Your Google Workspace email address
+EMAIL_HOST_USER = 'michael@CEBBA.org'  # Your Google Workspace email address
 EMAIL_HOST_PASSWORD = 'Adambeck2019'  # App-specific password
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER

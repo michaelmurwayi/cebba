@@ -1,2 +1,2 @@
-# cebba
-Official Company website for Cebba Coffee Agency
+# CEBBA
+Official Company website for CEBBA Coffee Agency
