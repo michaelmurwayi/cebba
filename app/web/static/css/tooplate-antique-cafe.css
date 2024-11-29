@@ -1,12 +1,3 @@
-/*
-
-Tooplate 2126 Antique Cafe
-
-https://www.tooplate.com/view/2126-antique-cafe
-
-*/
-
-
 body {
     font-family: 'Raleway', sans-serif;
     background-color: #666;
@@ -35,10 +26,6 @@ footer span a { color: #FFF; }
     max-width: 1200px;
 }
 
-.parallax-window {
-    height: 1064px;
-    background: transparent;
-}
 
 .tm-text-yellow {
     color: #FC6;
@@ -168,17 +155,74 @@ textarea::-ms-input-placeholder { /* Microsoft Edge */
         margin-bottom: 10px;
     }
 }
+.tm-bg-brown {
+    background-color: #544639;
+}
+
+.tm-text-brown {
+    color: #544639;
+}
+
+.tm-text-yellow {
+    color: #FC6;
+}
+
+.card {
+    border-radius: 15px;
+    overflow: hidden;  /* Ensures that no content overflows the card */
+}
+
+.card-body {
+    padding: 20px;
+}
+
+/* Fixing image overflow issues */
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;  /* Ensure the image covers the space without distorting */
+}
+
+/* Responsive Layout */
+@media (max-width: 767px) {
+    .row-cols-1 {
+        grid-template-columns: 1fr; /* 1 card per row on mobile */
+    }
+
+    .card {
+        flex-direction: column;
+    }
+
+    .card img {
+        max-height: 200px; /* Control max height of images */
+        object-fit: cover;
+    }
+
+    .card-body {
+        padding: 15px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 979px) {
+    .row-cols-sm-2 {
+        grid-template-columns: repeat(2, 1fr); /* 2 cards per row for medium screens */
+    }
+}
+
+@media (min-width: 980px) {
+    .row-cols-1, .row-cols-sm-2 {
+        grid-template-columns: repeat(2, 1fr); /* 2 cards per row on large screens */
+    }
+}
+
 
 .ag-format-container {
     width: 65vw;
     margin: 0 auto;
   }
-  
-  
-  body {
-    background-color: #000;
-  }
-  .ag-courses_box {
+    
+ 
+.ag-courses_box {
     display: flex;
     align-items: flex-start;
     flex-wrap: wrap;
