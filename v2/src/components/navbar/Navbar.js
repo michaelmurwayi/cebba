@@ -1,16 +1,18 @@
 import React, { useState } from "react";
-import { AppBar, Toolbar, Typography, Button, IconButton, Drawer, List, ListItem, ListItemText, Box, Menu, MenuItem, Collapse } from "@mui/material";
+import { AppBar, Toolbar, Button, IconButton, Drawer, List, ListItem, ListItemText, Box, Menu, MenuItem, Collapse } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import ExpandLess from "@mui/icons-material/ExpandLess";
 import ExpandMore from "@mui/icons-material/ExpandMore";
+import { useLocation, Link } from "react-router-dom";
 import initialState from "../../state/initialState";
-import logo  from "./logo.png"
+import logo from "./logo.png";
 
 const Navbar = () => {
     const { navItems, fileResources } = initialState;
+    const location = useLocation(); // Get current URL path
     const [mobileOpen, setMobileOpen] = useState(false);
     const [anchorEl, setAnchorEl] = useState(null);
-    const [resourcesOpen, setResourcesOpen] = useState(false); // Track expansion for mobile drawer
+    const [resourcesOpen, setResourcesOpen] = useState(false);
 
     const handleDrawerToggle = () => {
         setMobileOpen(!mobileOpen);
@@ -25,25 +27,43 @@ const Navbar = () => {
     };
 
     const handleResourcesToggle = () => {
-        setResourcesOpen(!resourcesOpen); // Toggle Resources list in mobile drawer
+        setResourcesOpen(!resourcesOpen);
     };
 
     return (
         <AppBar position="static" sx={{ bgcolor: "white" }}>
             <Toolbar sx={{ display: "flex", justifyContent: "space-between" }}>
-                 {/* Company Logo - Left Side */}
-                 <Box sx={{ display: "flex", alignItems: "center", ml: 2 }}>
+                {/* Company Logo - Left Side */}
+                <Box sx={{ display: "flex", alignItems: "center", ml: 2 }}>
                     <img 
-                        src={logo}  // Replace with the actual logo path
+                        src={logo}  
                         alt="Company Logo" 
-                        style={{ height: "60px", width: "auto", borderRadius: "15px" }} // Adjust size
+                        style={{ height: "60px", width: "auto", borderRadius: "15px" }} 
                     />
                 </Box>
+
                 {/* Desktop Navigation - Aligned to the Right */}
                 <Box sx={{ display: { xs: "none", md: "flex" }, gap: 2, mr: 2 }}>
-                    {navItems.map((item) => (
-                        <Button key={item} sx={{ color: "black", "&:hover": { color: "brown" }, fontWeight: "bold" }}>{item}</Button>
-                    ))}
+                    {navItems.map((item, index) => {
+                        const path = item.toLowerCase() === "home" ? "/" : `/${item.toLowerCase()}`;
+                        const isActive = location.pathname === path || (item.toLowerCase() === "home" && location.pathname === "/");
+
+                        return (
+                            <Button 
+                                key={index} 
+                                component={Link} 
+                                to={path} 
+                                sx={{ 
+                                    color: isActive ? "brown" : "black", 
+                                    fontWeight: "bold",
+                                    borderBottom: isActive ? "2px solid brown" : "none",
+                                    "&:hover": { color: "brown" }
+                                }}
+                            >
+                                {item}
+                            </Button>
+                        );
+                    })}
 
                     {/* Resources Dropdown */}
                     <Button 
@@ -84,11 +104,23 @@ const Navbar = () => {
             <Drawer anchor="right" open={mobileOpen} onClose={handleDrawerToggle}>
                 <Box sx={{ width: 250 }}>
                     <List>
-                        {navItems.map((item) => (
-                            <ListItem button key={item} onClick={handleDrawerToggle}>
-                                <ListItemText primary={item} />
-                            </ListItem>
-                        ))}
+                        {navItems.map((item, index) => {
+                            const path = item.toLowerCase() === "home" ? "/" : `/${item.toLowerCase()}`;
+                            const isActive = location.pathname === path || (item.toLowerCase() === "home" && location.pathname === "/");
+
+                            return (
+                                <ListItem 
+                                    button 
+                                    key={index} 
+                                    component={Link} 
+                                    to={path} 
+                                    sx={{ backgroundColor: isActive ? "rgba(165, 42, 42, 0.1)" : "transparent" }}
+                                    onClick={handleDrawerToggle}
+                                >
+                                    <ListItemText primary={item} sx={{ fontWeight: isActive ? "bold" : "normal" }} />
+                                </ListItem>
+                            );
+                        })}
 
                         {/* Resources Dropdown in Mobile Sidebar */}
                         <ListItem button onClick={handleResourcesToggle}>
