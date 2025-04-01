@@ -1,3 +1,4 @@
+import Coffee from "../assets/coffee.png";
 const initialState = {
     navItems: [
         "Home",
@@ -20,7 +21,9 @@ const initialState = {
         { name: "Sample Sales Summary", link: "/files/file3.pdf" }
         ],
     HomePage: {
-        header:{},
+        header:{
+            bgImage: Coffee
+        },
         about: {
             image1: "",
             image2: "",
