@@ -1,5 +1,5 @@
 import React from "react";
-import { Grid, Typography, Box } from "@mui/material";
+import { Grid, Typography, Box, useMediaQuery, useTheme } from "@mui/material";
 
 const stats = [
   { value: "100,000+", label: "Number of Bags Received", color: "#4CAF50" },
@@ -8,12 +8,19 @@ const stats = [
 ];
 
 const StatsSection = () => {
+  const theme = useTheme();
+  const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"));
+  const isMediumScreen = useMediaQuery(theme.breakpoints.between("sm", "md"));
+
   return (
     <Box sx={{ backgroundColor: "#000", color: "white", py: 5, textAlign: "center" }}>
-      <Grid container spacing={5} justifyContent="space-evenly" alignItems="center">
+      <Grid container spacing={5} justifyContent="space-around" alignItems="center">
         {stats.map((stat, index) => (
           <Grid item xs={12} sm={4} key={index} sx={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
-            <Typography variant="h3" sx={{ fontWeight: "bold", color: stat.color }}>
+            <Typography
+              variant={isSmallScreen ? "h5" : isMediumScreen ? "h4" : "h3"}
+              sx={{ fontWeight: "bold", color: stat.color }}
+            >
               {stat.value}
             </Typography>
             <Typography variant="body1" sx={{ opacity: 0.8 }}>
