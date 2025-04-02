@@ -15,6 +15,11 @@ const initialState = {
         slogan: "Experience the Enablers of Elixir Energy"
 
     },
+    statistics: {
+        bags: 100000,
+        farmers: 1000,
+        grades: 10,
+    },
     fileResources: [
         { name: "Farmer Agreement", link: "/files/file1.pdf" },
         { name: "Sample Stock Summary", link: "/files/file2.pdf" },
