@@ -1,6 +1,8 @@
 import React from "react";
 import { Grid, Typography, Box } from "@mui/material";
-import intro from "../../assets/intro.jpg";
+// import intro from "../../assets/intro.jpg";
+import intro from "../../assets/beans.jpg";
+import mug from "../../assets/intro.jpg"
 
 const Layout = ({
   headerText = "Header Text",
@@ -14,7 +16,8 @@ const Layout = ({
         minHeight: "100vh", 
         width: "100%", 
         margin: 0,
-        flexWrap: { xs: "wrap", md: "nowrap" }
+        flexWrap: { xs: "wrap", md: "nowrap" },
+        
       }}
     >
       {/* Left column with image */}
@@ -26,7 +29,7 @@ const Layout = ({
           display: "flex",
           justifyContent: { xs: "center", md: "flex-end" }, // Align right on desktop
           alignItems: "center",
-          padding: { xs: "16px", md: "32px" }, // Reduced padding
+          padding: { xs: "16px", md: "0px" }, // Reduced padding
           minHeight: { xs: "50vh", md: "100vh" },
           width: { xs: "100%", md: "50%" },
           flex: { md: "0 0 50%" }
@@ -34,8 +37,8 @@ const Layout = ({
       >
         <Box
           component="img"
-          src={imageUrl}
-          alt="Background Image"
+          src= {intro}
+          alt="Introduction Image"
           sx={{
             width: { xs: "70%", md: "70%" }, // Slightly larger on mobile
             height: { xs: "70%", md: "70%" },
@@ -55,7 +58,7 @@ const Layout = ({
           display: "flex",
           flexDirection: "column",
           justifyContent: "center",
-          padding: { xs: "16px", md: "32px" }, // Reduced padding
+          padding: { xs: "16px", md: "20px" }, // Reduced padding
           minHeight: { xs: "auto", md: "100vh" },
           width: { xs: "100%", md: "50%" },
           flex: { md: "0 0 50%" }
@@ -72,7 +75,7 @@ const Layout = ({
           <Typography
             variant="h2"
             sx={{
-              fontSize: { xs: "2.2rem", sm: "2.8rem", md: "3.5rem", lg: "4rem" }, // Slightly smaller
+              fontSize: { xs: "2.2rem", sm: "2.8rem", md: "3.5rem", lg: "5rem" }, // Slightly smaller
               lineHeight: 1.2,
               fontWeight: 900,
               marginRight: { xs: 0, md: 2 },
@@ -84,7 +87,7 @@ const Layout = ({
           
           <Box
             component="img"
-            src={intro}
+            src={mug}
             alt="CEBBA Logo"
             sx={{
               width: { xs: "70px", md: "100px", lg: "130px" }, // Slightly smaller
@@ -97,7 +100,7 @@ const Layout = ({
           variant="body1" 
           sx={{ 
             textAlign: "left", 
-            fontSize: { xs: "0.95rem", md: "1.05rem", lg: "1.15rem" }, // Slightly smaller
+            fontSize: { xs: "0.95rem", md: "1.45rem", lg: "1.65rem" }, // Slightly smaller
             lineHeight: 1.6, // Tighter line height
           }}
         >
