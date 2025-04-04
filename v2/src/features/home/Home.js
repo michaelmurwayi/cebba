@@ -1,4 +1,8 @@
 import react from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
+
 import Navbar from "../../components/navbar/Navbar";
 import Header from "../../components/header/Header";
 import initialState from "../../state/initialState";
@@ -10,8 +14,16 @@ import slogan from "../../assets/slogan.png";
 import Contact from "../../components/contact/Contact";
 import Footer from "../../components/footer/Footer";
 
+
+
 const Home = () => {
   const { HomePage, companyInfo } = initialState;
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // animation duration in ms
+      once: false,     // whether animation should happen only once
+    });
+  }, []);  
   return (
     <div>
       <Navbar />
