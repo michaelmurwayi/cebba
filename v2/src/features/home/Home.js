@@ -7,6 +7,7 @@ import Statistics from "../../components/statistics/Statistics";
 import Service from "../../components/services/Services";
 import { Box, Typography, Container } from "@mui/material";
 import slogan from "../../assets/slogan.png";
+import Contact from "../../components/contact/Contact";
 
 const Home = () => {
   const { HomePage, companyInfo } = initialState;
@@ -74,6 +75,7 @@ const Home = () => {
         </Container>
       </Box>
     </Box>
+    <Contact />
     </div>
   );
 }  
