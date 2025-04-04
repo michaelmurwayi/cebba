@@ -8,6 +8,7 @@ import Service from "../../components/services/Services";
 import { Box, Typography, Container } from "@mui/material";
 import slogan from "../../assets/slogan.png";
 import Contact from "../../components/contact/Contact";
+import Footer from "../../components/footer/Footer";
 
 const Home = () => {
   const { HomePage, companyInfo } = initialState;
@@ -76,6 +77,7 @@ const Home = () => {
       </Box>
     </Box>
     <Contact />
+    <Footer />
     </div>
   );
 }  
