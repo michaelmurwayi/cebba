@@ -1,25 +1,28 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Grid, Typography, Box } from "@mui/material";
-// import intro from "../../assets/intro.jpg";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
-import mug from "../../assets/intro.jpg"
+import mugImage from "../../assets/intro.jpg"; // Optional direct import
 import initialState from "../../state/initialState";
 
 const Layout = ({
   bodyText = initialState.HomePage.about.text,
   beans = initialState.HomePage.about.image1,
   mug = initialState.HomePage.about.image2,
-  
 }) => {
+  useEffect(() => {
+    AOS.init({ duration: 1000, once: true });
+  }, []);
+
   return (
-    <Grid 
-      container 
-      sx={{ 
-        minHeight: "100vh", 
-        width: "100%", 
+    <Grid
+      container
+      sx={{
+        minHeight: "100vh",
+        width: "100%",
         margin: 0,
         flexWrap: { xs: "wrap", md: "nowrap" },
-        
       }}
     >
       {/* Left column with image */}
@@ -29,20 +32,21 @@ const Layout = ({
         md={6}
         sx={{
           display: "flex",
-          justifyContent: { xs: "center", md: "flex-end" }, // Align right on desktop
+          justifyContent: { xs: "center", md: "flex-end" },
           alignItems: "center",
-          padding: { xs: "16px", md: "0px" }, // Reduced padding
+          padding: { xs: "16px", md: "0px" },
           minHeight: { xs: "50vh", md: "100vh" },
           width: { xs: "100%", md: "50%" },
-          flex: { md: "0 0 50%" }
+          flex: { md: "0 0 50%" },
         }}
       >
         <Box
+          data-aos="fade-right"
           component="img"
-          src= {beans}
+          src={beans}
           alt="Introduction Image"
           sx={{
-            width: { xs: "80%", md: "60%" }, // Slightly larger on mobile
+            width: { xs: "80%", md: "60%" },
             height: { xs: "80%", md: "60%" },
             maxHeight: "700px",
             objectFit: "cover",
@@ -60,50 +64,52 @@ const Layout = ({
           display: "flex",
           flexDirection: "column",
           justifyContent: "center",
-          padding: { xs: "16px", md: "20px" }, // Reduced padding
+          padding: { xs: "16px", md: "20px" },
           minHeight: { xs: "auto", md: "100vh" },
           width: { xs: "100%", md: "50%" },
-          flex: { md: "0 0 50%" }
+          flex: { md: "0 0 50%" },
         }}
       >
         <Box
+          data-aos="fade-down"
           sx={{
             display: "flex",
             alignItems: "center",
-            marginBottom: { xs: 2, md: 3 }, // Reduced margin
-            flexWrap: { xs: "wrap", md: "nowrap" }
+            marginBottom: { xs: 2, md: 3 },
+            flexWrap: { xs: "wrap", md: "nowrap" },
           }}
         >
           <Typography
             variant="h2"
             sx={{
-              fontSize: { xs: "2.2rem", sm: "2.8rem", md: "3.5rem", lg: "5rem" }, // Slightly smaller
+              fontSize: { xs: "2.2rem", sm: "2.8rem", md: "3.5rem", lg: "5rem" },
               lineHeight: 1.2,
               fontWeight: 900,
               marginRight: { xs: 0, md: 2 },
-              marginBottom: { xs: 1, md: 0 }, // Reduced margin
+              marginBottom: { xs: 1, md: 0 },
             }}
           >
             WE ARE <span style={{ color: "#b87d3f" }}>CEBBA</span>
           </Typography>
-          
+
           <Box
             component="img"
             src={mug}
             alt="CEBBA Logo"
             sx={{
-              width: { xs: "70px", md: "100px", lg: "130px" }, // Slightly smaller
+              width: { xs: "70px", md: "100px", lg: "130px" },
               height: { xs: "70px", md: "100px", lg: "130px" },
             }}
           />
         </Box>
 
-        <Typography 
-          variant="body1" 
-          sx={{ 
-            textAlign: "left", 
-            fontSize: { xs: "0.95rem", md: "1.25rem", lg: "1.35rem" }, // Slightly smaller
-            lineHeight: 1.6, // Tighter line height
+        <Typography
+          data-aos="fade-up"
+          variant="body1"
+          sx={{
+            textAlign: "left",
+            fontSize: { xs: "0.95rem", md: "1.25rem", lg: "1.35rem" },
+            lineHeight: 1.6,
           }}
         >
           {bodyText}
