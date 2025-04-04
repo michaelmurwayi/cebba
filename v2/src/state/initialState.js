@@ -1,4 +1,10 @@
 import Coffee from "../assets/coffee.png";
+import mug from "../assets/intro.jpg"
+import intro from "../assets/beans.jpg";
+import agronomy from "../assets/agronomy.png";
+import marketing from "../assets/marketing.png";
+import quality from "../assets/quality_control.png";
+
 const initialState = {
     navItems: [
         "Home",
@@ -15,11 +21,11 @@ const initialState = {
         slogan: "Experience the Enablers of Elixir Energy"
 
     },
-    statistics: {
-        bags: 100000,
-        farmers: 1000,
-        grades: 10,
-    },
+    stats : [
+        { value: "100,000+", label: "Number of Bags Received", color: "#4CAF50" },
+        { value: "1000+", label: "Network of Coffee Farmers", color: "#00BCD4" },
+        { value: "10+", label: "Coffee Grade Variants", color: "#FFFFFF" },
+      ],
     fileResources: [
         { name: "Farmer Agreement", link: "/files/file1.pdf" },
         { name: "Sample Stock Summary", link: "/files/file2.pdf" },
@@ -30,9 +36,9 @@ const initialState = {
             bgImage: Coffee
         },
         about: {
-            image1: "",
-            image2: "",
-            text : "orem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+            image1: intro,
+            image2: mug,
+            text : "Coffee Estates Bourgeoisie Brokers Agency Limited stands as a trailblazer in the coffee brokerage industry, driven by a mission to revolutionize coffee trading with an unwavering focus on farmer-friendly practices, sustainability, and unparalleled quality. By prioritizing the welfare of coffee producers, the agency ensures fair compensation and fosters long-term relationships that empower farmers and enrich local communities. Their sustainable operations are designed to minimize environmental impact while promoting eco-friendly farming techniques, thereby safeguarding the future of coffee cultivation. Committed to quality excellence, Coffee Estates Bourgeoisie Brokers Agency Limited meticulously curates and delivers premium coffee, satisfying even the most discerning palates and setting a new standard in the global coffee trade."
         },
         statistics:{
             bags: "",
@@ -40,23 +46,12 @@ const initialState = {
             gradeVariant: "",
         }   
     },
-    services: {
-        agronomy: {
-            title: "Agronomy",
-            image: "",
-            description: ""
-        },
-        marketing: {
-            title: "Marketing",
-            image: "",
-            description: ""
-        },
-        qualityControl: {
-            title: "Quality Control",
-            image: "",
-            description: ""
-        },
-    }
+    
+    services : [
+        { title: "Agronomy", image: agronomy, descriptions: "" },
+        { title: "Marketing", image: marketing, descriptions: "" },
+        { title: "Quality Control", image: quality, descriptions: ""},
+    ]
 };
 
 

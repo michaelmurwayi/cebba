@@ -1,13 +1,15 @@
 import React from "react";
 import { Grid, Typography, Box } from "@mui/material";
 // import intro from "../../assets/intro.jpg";
-import intro from "../../assets/beans.jpg";
+
 import mug from "../../assets/intro.jpg"
+import initialState from "../../state/initialState";
 
 const Layout = ({
-  headerText = "Header Text",
-  bodyText = "Coffee Estates Bourgeoisie Brokers Agency Limited stands as a trailblazer in the coffee brokerage industry, driven by a mission to revolutionize coffee trading with an unwavering focus on farmer-friendly practices, sustainability, and unparalleled quality. By prioritizing the welfare of coffee producers, the agency ensures fair compensation and fosters long-term relationships that empower farmers and enrich local communities. Their sustainable operations are designed to minimize environmental impact while promoting eco-friendly farming techniques, thereby safeguarding the future of coffee cultivation. Committed to quality excellence, Coffee Estates Bourgeoisie Brokers Agency Limited meticulously curates and delivers premium coffee, satisfying even the most discerning palates and setting a new standard in the global coffee trade.",
-  imageUrl = "https://images.pexels.com/photos/312418/pexels-photo-312418.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+  bodyText = initialState.HomePage.about.text,
+  beans = initialState.HomePage.about.image1,
+  mug = initialState.HomePage.about.image2,
+  
 }) => {
   return (
     <Grid 
@@ -37,14 +39,14 @@ const Layout = ({
       >
         <Box
           component="img"
-          src= {intro}
+          src= {beans}
           alt="Introduction Image"
           sx={{
-            width: { xs: "70%", md: "70%" }, // Slightly larger on mobile
-            height: { xs: "70%", md: "70%" },
+            width: { xs: "80%", md: "60%" }, // Slightly larger on mobile
+            height: { xs: "80%", md: "60%" },
             maxHeight: "700px",
             objectFit: "cover",
-            borderRadius: { xs: 0, md: 2 },
+            borderRadius: { xs: 0, md: 20 },
           }}
         />
       </Grid>
@@ -100,7 +102,7 @@ const Layout = ({
           variant="body1" 
           sx={{ 
             textAlign: "left", 
-            fontSize: { xs: "0.95rem", md: "1.45rem", lg: "1.65rem" }, // Slightly smaller
+            fontSize: { xs: "0.95rem", md: "1.25rem", lg: "1.35rem" }, // Slightly smaller
             lineHeight: 1.6, // Tighter line height
           }}
         >
