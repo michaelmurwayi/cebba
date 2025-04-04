@@ -1,8 +1,14 @@
-import React from "react";
-import { Box, TextField, Button, Typography, Grid, Container } from "@mui/material";
-import beans from "../../assets/beans.png"; // Placeholder for the image
+import React, { useEffect } from "react";
+import { Box, TextField, Button, Typography, Container } from "@mui/material";
+import beans from "../../assets/beans.png"; // Replace with actual image path
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const ContactForm = () => {
+  useEffect(() => {
+    AOS.init({ duration: 1000, once: true });
+  }, []);
+
   return (
     <Box
       sx={{
@@ -12,7 +18,6 @@ const ContactForm = () => {
       }}
     >
       <Container maxWidth="lg">
-        
         <Box
           sx={{
             display: "flex",
@@ -25,22 +30,23 @@ const ContactForm = () => {
             borderRadius: "8px",
           }}
         >
-            <Box
+          {/* Image Box */}
+          <Box
+            data-aos="fade-right"
             sx={{
-              width: { xs: "70%", md: "25%" }, // Adjust width as needed
-              minHeight: 200, // Minimum height for the image container
-              bgcolor: "white", // Placeholder background color
+              width: { xs: "70%", md: "25%" },
+              minHeight: 200,
+              bgcolor: "white",
               borderRadius: "8px",
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
             }}
           >
-            <Typography variant="h6" color="textSecondary">
-              <img src={beans} alt="Beans" style={{ maxWidth: "100%", maxHeight: "100%" }} />
-            </Typography>
-            {/* You would typically place an <img> tag here */}
+            <img src={beans} alt="Beans" style={{ maxWidth: "100%", maxHeight: "100%" }} />
           </Box>
+
+          {/* "GET IN TOUCH" Text */}
           <Box sx={{ textAlign: "center", flexGrow: 1 }}>
             <Typography
               variant="h3"
@@ -80,18 +86,18 @@ const ContactForm = () => {
 
           {/* Contact Form Section */}
           <Box
+            data-aos="fade-left"
             sx={{
               width: { xs: "80%", sm: "80%", md: "40%" },
               p: 4,
               borderRadius: "8px",
               boxShadow: 2,
               display: "flex",
-              flexDirection: "column", // Stack items vertically
-              margin: "20px", // Center the form
-              backgroundColor: "black", // Light background for the form
+              flexDirection: "column",
+              margin: "20px",
+              backgroundColor: "black",
             }}
           >
-            {/* Remove Grid to arrange items vertically */}
             <TextField
               fullWidth
               label="Name"
@@ -102,7 +108,7 @@ const ContactForm = () => {
                   borderRadius: "4px",
                 },
               }}
-              sx={{ mb: 3 }} // Add margin bottom for spacing
+              sx={{ mb: 3 }}
             />
 
             <TextField
@@ -116,7 +122,7 @@ const ContactForm = () => {
                   borderRadius: "4px",
                 },
               }}
-              sx={{ mb: 3 }} // Add margin bottom for spacing
+              sx={{ mb: 3 }}
             />
 
             <TextField
@@ -132,12 +138,11 @@ const ContactForm = () => {
                 },
               }}
               sx={{
-                width: "100%", // Ensures full width
-                mb: 3, // Add margin bottom for spacing
+                width: "100%",
+                mb: 3,
               }}
             />
 
-            {/* Submit Button */}
             <Button
               fullWidth
               variant="contained"
