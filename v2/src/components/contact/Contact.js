@@ -15,9 +15,10 @@ const ContactForm = () => {
         width: "100%",
         py: 5,
         mt: 0,
+        overflowX: "hidden", // Prevent horizontal overflow
       }}
     >
-      <Container maxWidth="lg">
+      <Container maxWidth="lg" sx={{ px: { xs: 2, sm: 3 } }}>
         <Box
           sx={{
             display: "flex",
@@ -34,7 +35,8 @@ const ContactForm = () => {
           <Box
             data-aos="fade-right"
             sx={{
-              width: { xs: "70%", md: "25%" },
+              width: { xs: "100%", sm: "80%", md: "25%" },
+              maxWidth: 300,
               minHeight: 200,
               bgcolor: "white",
               borderRadius: "8px",
@@ -43,7 +45,11 @@ const ContactForm = () => {
               alignItems: "center",
             }}
           >
-            <img src={beans} alt="Beans" style={{ maxWidth: "100%", maxHeight: "100%" }} />
+            <img
+              src={beans}
+              alt="Beans"
+              style={{ maxWidth: "100%", maxHeight: "100%" }}
+            />
           </Box>
 
           {/* "GET IN TOUCH" Text */}
@@ -55,6 +61,8 @@ const ContactForm = () => {
                 fontStyle: "italic",
                 fontWeight: 900,
                 m: 0,
+                overflowWrap: "break-word",
+                wordBreak: "break-word",
               }}
             >
               GET
@@ -66,6 +74,8 @@ const ContactForm = () => {
                 fontStyle: "italic",
                 fontWeight: 900,
                 m: 0,
+                overflowWrap: "break-word",
+                wordBreak: "break-word",
               }}
             >
               IN
@@ -78,6 +88,8 @@ const ContactForm = () => {
                 fontWeight: 900,
                 color: "#A0522D",
                 m: 0,
+                overflowWrap: "break-word",
+                wordBreak: "break-word",
               }}
             >
               TOUCH
@@ -88,13 +100,13 @@ const ContactForm = () => {
           <Box
             data-aos="fade-left"
             sx={{
-              width: { xs: "80%", sm: "80%", md: "40%" },
+              width: { xs: "100%", sm: "100%", md: "40%" },
+              maxWidth: 500,
               p: 4,
               borderRadius: "8px",
               boxShadow: 2,
               display: "flex",
               flexDirection: "column",
-              margin: "20px",
               backgroundColor: "black",
             }}
           >
@@ -137,10 +149,7 @@ const ContactForm = () => {
                   borderRadius: "4px",
                 },
               }}
-              sx={{
-                width: "100%",
-                mb: 3,
-              }}
+              sx={{ mb: 3 }}
             />
 
             <Button

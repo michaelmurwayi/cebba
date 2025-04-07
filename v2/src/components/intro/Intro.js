@@ -3,7 +3,6 @@ import { Grid, Typography, Box } from "@mui/material";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-import mugImage from "../../assets/intro.jpg"; // Optional direct import
 import initialState from "../../state/initialState";
 
 const Layout = ({
@@ -87,6 +86,7 @@ const Layout = ({
               fontWeight: 900,
               marginRight: { xs: 0, md: 2 },
               marginBottom: { xs: 1, md: 0 },
+              whiteSpace: "nowrap", // Prevent wrap
             }}
           >
             WE ARE <span style={{ color: "#b87d3f" }}>CEBBA</span>
