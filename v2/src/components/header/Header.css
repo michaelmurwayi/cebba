@@ -22,7 +22,7 @@
   
   /* Optional: If you want each word to appear line by line */
   .word-wrapper {
-    display: inline-block; /* Keeps each word in its own span */
+    display: inline; /* Keeps each word in its own span */
     margin-right: 0.5rem;
   }
   
