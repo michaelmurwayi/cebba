@@ -1,6 +1,9 @@
 import React from "react";
 import { Box, Typography, useMediaQuery, useTheme } from "@mui/material";
 import { styled } from "@mui/system";
+import PhoneIcon from '@mui/icons-material/Phone';
+import PublicIcon from '@mui/icons-material/Public';
+import LocationOnIcon from '@mui/icons-material/LocationOn';
 
 import beans from "../../assets/beans.png";
 import initialState from "../../state/initialState";
@@ -9,63 +12,138 @@ import Header from "../../components/header/Header";
 import about from "../../assets/about.jpg";
 import Vision from "../../components/section1/Section";
 import Mission from "../../components/section2/Section";
+
 const About = () => {
-    // Use the theme hook for useMediaQuery
-    const theme = useTheme();
-    const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
-    const abv = initialState.companyInfo.abv;
-    const visionText = initialState.companyInfo.vision;
-    // Styled components
-    const BannerContainer = styled(Box)(({ theme }) => ({
-        width: '100%',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        backgroundColor: '#000',
-        overflow: 'hidden', // Prevents overflow
-        [theme.breakpoints.down('sm')]: {
-          flexDirection: 'column',
-        },
-    }));
-      
-    const CoffeeImage = styled("img")(({ theme }) => ({
-        height: 80,
-        width: 'auto', // Make width auto to maintain aspect ratio
-        maxWidth: '100%', // Ensure images don't exceed their container width
-        objectFit: 'contain',
-        margin: theme.spacing(1),
-    }));
-      
-    return (
-        <div>
-            <Navbar />
-            <Header 
-                title="ABOUT CEBBA"
-                bgImage={about}
-            />
-            <Vision 
-                title={abv}
-                highlight={"Vision"}
-                visionText={visionText}
-            />
-            <BannerContainer>
-                <CoffeeImage src={beans} alt="Coffee beans left" />
-                <Typography
-                    variant={isMobile ? "body1" : "h4"}
-                    color="white"
-                    sx={{ textAlign: 'center', fontStyle: 'italic', marginX: 2 }}
-                >
-                    Great brands start with great coffee
-                </Typography>
-                <CoffeeImage src={beans} alt="Coffee beans right" />
-            </BannerContainer>
-            <Mission 
-                title={abv}
-                highlight={"Mission"}
-                visionText={initialState.companyInfo.mission}
-            />
-        </div>
-    );
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
+  const abv = initialState.companyInfo.abv;
+  const visionText = initialState.companyInfo.vision;
+  const missionText = initialState.companyInfo.mission;
+
+  // Styled components
+  const BannerContainer = styled(Box)(({ theme }) => ({
+    width: '100%',
+    maxWidth: '100vw',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: '#000',
+    overflowX: 'hidden',
+    boxSizing: 'border-box',
+    paddingLeft: theme.spacing(1),
+    paddingRight: theme.spacing(1),
+    [theme.breakpoints.down('sm')]: {
+      flexDirection: 'row',
+      flexWrap: 'nowrap',
+    },
+  }));
+
+  const CoffeeImage = styled("img")(({ theme }) => ({
+    height: 100,
+    width: 'auto',
+    maxWidth: 100,
+    objectFit: 'contain',
+    margin: theme.spacing(0.5),
+  }));
+
+  
+  const InfoItem = styled(Box)(({ theme }) => ({
+    display: 'flex',
+    alignItems: 'center',
+    marginLeft: theme.spacing(15),
+    textAlign: 'left',
+    color: 'white',
+    // Media query for mobile view
+    [theme.breakpoints.down('sm')]: {
+      marginLeft: theme.spacing(5), // Adjust margin for smaller screens
+      flexDirection: 'column', // Stack items vertically for smaller screens
+      textAlign: 'left', // Center-align text on small screens
+    },
+  }));
+  
+  const IconText = styled(Typography)(({ theme }) => ({
+    fontFamily: 'monospace',
+    fontSize: '1.2rem',
+    marginLeft: theme.spacing(1),
+    whiteSpace: 'pre-line',
+    // Media query for mobile view
+    [theme.breakpoints.down('sm')]: {
+      fontSize: '0.7rem', // Adjust font size for smaller screens
+      marginLeft: 0, // Remove margin on smaller screens
+      textAlign: 'center', // Center-align text on small screens
+    },
+  }));
+  
+  return (
+    <div style={{ overflowX: 'hidden', maxWidth: '100vw' }}>
+      <Navbar />
+      <Header
+        title="ABOUT CEBBA"
+        bgImage={about}
+      />
+
+      {/* Optional: Vision Section */}
+      <Vision
+        title={abv}
+        highlight={"VISION"}
+        visionText={visionText}
+      />
+
+      <BannerContainer>
+        <CoffeeImage
+          src={beans}
+          alt="Coffee beans left"
+        />
+        <Typography
+        color="white"
+        sx={{
+            textAlign: 'center',
+            fontStyle: 'italic',
+            mx: { xs: 0.5, sm: 2 },
+            fontSize: { xs: '0.65rem', sm: '1rem', md: '2rem' },
+            whiteSpace: 'nowrap',
+            overflow: 'hidden',
+            textOverflow: 'ellipsis',
+            letterSpacing: { xs: 'normal', sm: 'normal', md: '0.1em' }, // Increase word spacing for web view (md and above)
+        }}
+        >
+        Great brands start with great coffee
+        </Typography>
+
+        <CoffeeImage
+          src={beans}
+          alt="Coffee beans right"
+        />
+      </BannerContainer>
+
+      {/* Optional: Mission Section */}
+      <Mission
+        title={abv}
+        highlight={"Mission"}
+        visionText={missionText}
+      />
+      <BannerContainer>
+      <InfoItem>
+        <PhoneIcon sx={{ color: 'limegreen' }} />
+        <IconText>+254-72291029</IconText>
+      </InfoItem>
+
+      <InfoItem>
+        <PublicIcon sx={{ color: '#2f7a99' }} />
+        <IconText>www.cebba.ke</IconText>
+      </InfoItem>
+
+      <InfoItem>
+        <LocationOnIcon sx={{ color: 'red' }} />
+        <IconText>
+          Coffee Plaza,
+          Exchange lane-{"\n"}
+          Off haile Selassie Avenue
+        </IconText>
+      </InfoItem>
+    </BannerContainer>
+    </div>
+  );
 };
 
 export default About;
