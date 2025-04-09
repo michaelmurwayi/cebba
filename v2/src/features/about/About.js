@@ -1,13 +1,14 @@
 import React from "react";
+import { Box, Typography, useMediaQuery, useTheme } from "@mui/material";
+import { styled } from "@mui/system";
+
+import beans from "../../assets/beans.png";
+import initialState from "../../state/initialState";
 import Navbar from "../../components/navbar/Navbar";
 import Header from "../../components/header/Header";
 import about from "../../assets/about.jpg";
 import Vision from "../../components/section1/Section";
-import { Box, Typography, useMediaQuery, useTheme } from "@mui/material";
-import { styled } from "@mui/system";
-import beans from "../../assets/beans.png";
-import initialState from "../../state/initialState";
-
+import Mission from "../../components/section2/Section";
 const About = () => {
     // Use the theme hook for useMediaQuery
     const theme = useTheme();
@@ -58,6 +59,11 @@ const About = () => {
                 </Typography>
                 <CoffeeImage src={beans} alt="Coffee beans right" />
             </BannerContainer>
+            <Mission 
+                title={abv}
+                highlight={"Mission"}
+                visionText={initialState.companyInfo.mission}
+            />
         </div>
     );
 };
