@@ -151,6 +151,7 @@ const About = () => {
     </BannerContainer>
     <Values />
     <Contact />
+    <Footer />
     </div>
   );
 };
