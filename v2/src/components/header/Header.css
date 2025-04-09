@@ -1,0 +1,28 @@
+/* src/Header.css */
+
+@keyframes typewriter {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+  
+  /* Apply the typewriter effect */
+  .typewriter-text {
+    overflow: hidden;
+    white-space: nowrap;
+    display: inline-block;
+    animation: typewriter 3s steps(80) 1s 1 normal both; /* Adjust duration and steps as necessary */
+    max-width: 100%; /* Ensures the entire width of the text container is used */
+    word-wrap: break-word; /* Ensures wrapping of words */
+    display: block;
+  }
+  
+  /* Optional: If you want each word to appear line by line */
+  .word-wrapper {
+    display: inline-block; /* Keeps each word in its own span */
+    margin-right: 0.5rem;
+  }
+  
