@@ -2,16 +2,18 @@ import React from "react";
 import Navbar from "../../components/navbar/Navbar";
 import Header from "../../components/header/Header";
 import about from "../../assets/about.jpg";
-import Section1 from "../../components/section1/Section";
+import Vision from "../../components/section1/Section";
 import { Box, Typography, useMediaQuery, useTheme } from "@mui/material";
 import { styled } from "@mui/system";
 import beans from "../../assets/beans.png";
+import initialState from "../../state/initialState";
 
 const About = () => {
     // Use the theme hook for useMediaQuery
     const theme = useTheme();
     const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
-
+    const abv = initialState.companyInfo.abv;
+    const visionText = initialState.companyInfo.vision;
     // Styled components
     const BannerContainer = styled(Box)(({ theme }) => ({
         width: '100%',
@@ -40,7 +42,11 @@ const About = () => {
                 title="ABOUT CEBBA"
                 bgImage={about}
             />
-            <Section1 />
+            <Vision 
+                title={abv}
+                highlight={"Vision"}
+                visionText={visionText}
+            />
             <BannerContainer>
                 <CoffeeImage src={beans} alt="Coffee beans left" />
                 <Typography

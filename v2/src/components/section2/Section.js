@@ -1,10 +1,18 @@
 import React from "react";
 import { Box, Grid } from "@mui/material";
+import initialState from "../../state/initialState";
 
-const Section = ({ title, highlight, visionText }) => {
+const Section = () => {
+  const { companyInfo } = initialState;
+
   return (
     <Box sx={{ flexGrow: 1, px: { xs: 2, md: 4 }, py: 4 }}>
-      <Grid container spacing={2} justifyContent="center" alignItems="center">
+      <Grid
+        container
+        spacing={2}
+        justifyContent="center"
+        alignItems="center"
+      >
         {/* Left Box: Title */}
         <Grid item xs={12} md="auto">
           <Box
@@ -26,9 +34,9 @@ const Section = ({ title, highlight, visionText }) => {
             }}
           >
             <span>
-              {title}{" "}
-              <span style={{ color: "rgb(205,127,50)" }}>
-                {highlight}
+              CEBBA{" "}
+              <span style={{ color: "rgb(205,127,50)" /* your color choice */ }}>
+                VISION
               </span>
             </span>
           </Box>
@@ -53,7 +61,7 @@ const Section = ({ title, highlight, visionText }) => {
               whiteSpace: "normal",
             }}
           >
-            {visionText}
+            {companyInfo.vision}
           </Box>
         </Grid>
       </Grid>

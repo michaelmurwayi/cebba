@@ -14,6 +14,7 @@ const initialState = {
     ],
     companyInfo: {
         name: "COFFEE ESTATE BOURGEOISIE BROKERS AGENCY",
+        abv: "CEBBA",
         location: "Coffee Plaza,Exchange lane-Off haile Selassie Avenue",
         contact: "+254 7229 190 29",
         website: "www.cebba.ke",
