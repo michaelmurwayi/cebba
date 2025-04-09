@@ -14,6 +14,7 @@ import Vision from "../../components/section1/Section";
 import Mission from "../../components/section2/Section";
 import Values from "../../components/values/Values";
 import Contact from "../../components/contact/Contact";
+import Footer from "../../components/footer/Footer";
 
 const About = () => {
   const theme = useTheme();
