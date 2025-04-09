@@ -12,6 +12,7 @@ import Header from "../../components/header/Header";
 import about from "../../assets/about.jpg";
 import Vision from "../../components/section1/Section";
 import Mission from "../../components/section2/Section";
+import Values from "../../components/values/Values";
 
 const About = () => {
   const theme = useTheme();
@@ -146,6 +147,7 @@ const About = () => {
         </IconText>
       </InfoItem>
     </BannerContainer>
+    <Values />
     </div>
   );
 };
