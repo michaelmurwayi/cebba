@@ -14,11 +14,14 @@ const initialState = {
     ],
     companyInfo: {
         name: "COFFEE ESTATE BOURGEOISIE BROKERS AGENCY",
+        abv: "CEBBA",
         location: "Coffee Plaza,Exchange lane-Off haile Selassie Avenue",
         contact: "+254 7229 190 29",
         website: "www.cebba.ke",
         logo: "",
-        slogan: "Experience the Enablers of Elixir Energy"
+        slogan: "Experience the Enablers of Elixir Energy",
+        vision: "To be the leading coffee brokerage agency globally, renowned for our unwavering dedication to fostering farmer-friendly practices and ensuring the highest quality coffee reaches consumers. We aspire to bridge the gap between coffee growers and the market, empowering farmers to achieve prosperity and recognition for their hard work while delivering unparalleled service and excellence to our partners.",
+        mission: "To be the leading coffee brokerage agency globally, renowned for our unwavering dedication to fostering farmer-friendly practices and ensuring the highest quality coffee reaches consumers. we aspire to bridge the gap between coffee growers and the market, empowering farmers to achieve prosperity and recognition for their hard work while delivering unparalleled service and excellence to our partners."
 
     },
     stats : [

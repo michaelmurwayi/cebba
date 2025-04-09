@@ -23,19 +23,30 @@ const Header = ({
     <Box
       sx={{
         position: "relative",
-        height: { xs: "100vh", md: "100vh" },
+        height: "90vh",
         display: "flex",
-        backgroundImage: `url(${bgImage})`,
-        backgroundPosition: "right",
-        backgroundRepeat: "no-repeat",
-        backgroundSize: { xs: "50%", md: "30%" },
         alignItems: "center",
-        justifyContent: "center", // Center horizontally
+        justifyContent: "center",
         padding: { xs: "0 20px", md: "0 50px" },
+        backgroundImage: `url(${bgImage})`,
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "cover",
         backgroundColor: "rgba(0, 0, 0, 1)",
-        flexDirection: "row",
       }}
     >
+      {/* Optional overlay to darken image */}
+      <Box
+        sx={{
+          position: "absolute",
+          top: 0,
+          left: 0,
+          width: "100%",
+          height: "100%",
+          backgroundColor: "rgba(0, 0, 0, 0.5)",
+          zIndex: 0,
+        }}
+      />
       <Typography
         variant="h2"
         sx={{
@@ -45,10 +56,9 @@ const Header = ({
           fontSize: { xs: "1.9rem", md: "5.5rem" },
           fontWeight: "bold",
           color: "white",
-          width: "100%", // Full width
+          width: "100%",
           wordWrap: "break-word",
-          textAlign: "center", // Aligns text left
-          backgroundColor: "rgba(0, 0, 0, 0.5)", // Optional: adds a semi-transparent background
+          textAlign: "center",
         }}
       >
         <span className="typewriter-text">
