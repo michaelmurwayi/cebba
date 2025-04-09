@@ -18,7 +18,7 @@ const Section = ({ title, highlight, visionText }) => {
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
-        // When the element comes into view, set visibility to true
+        // Set visibility when the element comes into view
         setIsVisible(entry.isIntersecting);
       },
       { threshold: 0.5 } // Trigger when 50% of the element is in view
@@ -39,7 +39,7 @@ const Section = ({ title, highlight, visionText }) => {
     <>
       <GlobalStyles
         styles={{
-          "@keyframes bounce": bounceKeyframes,
+          "@keyframes bounce": bounceKeyframes, // Apply bounce keyframes globally
         }}
       />
 
@@ -49,9 +49,9 @@ const Section = ({ title, highlight, visionText }) => {
           flexGrow: 1,
           px: { xs: 2, md: 4 },
           py: 4,
-          opacity: isVisible ? 1 : 0, // Apply opacity change when visible
-          transition: "opacity 2s ease-in-out", // Smooth transition for fade-in effect
-          animation: isVisible ? "bounce 1s linear " : "none", // Trigger bounce animation when visible
+          opacity: isVisible ? 1 : 0.5, // Apply opacity change when visible
+          transition: "opacity 2s ease-in-out", // Smooth fade-in effect
+          animation: isVisible ? "bounce 1s linear ease-in-out" : "none", // Trigger bounce animation when visible
         }}
       >
         <Grid container spacing={2} justifyContent="center" alignItems="center">
@@ -74,8 +74,8 @@ const Section = ({ title, highlight, visionText }) => {
                 whiteSpace: "normal",
                 flexDirection: "column",
                 opacity: isVisible ? 1 : 0,
-                transition: "opacity 2s ease-in-out",
-                animation: isVisible ? "bounce 1s linear infinite" : "none",
+                transition: "opacity 2s ease-in-out", // Smooth fade-in effect
+                animation: isVisible ? "bounce 1s linear ease-in-out" : "none", // Bounce animation for title
               }}
             >
               <span>
@@ -105,8 +105,8 @@ const Section = ({ title, highlight, visionText }) => {
                 overflowWrap: "break-word",
                 whiteSpace: "normal",
                 opacity: isVisible ? 1 : 0,
-                transition: "opacity 2s ease-in-out",
-                animation: isVisible ? "bounce 1s linear ease-in-out" : "none",
+                transition: "opacity 2s ease-in-out", // Smooth fade-in effect
+                animation: isVisible ? "bounce 1s linear ease-in-out" : "none", // Bounce animation for vision text
               }}
             >
               {visionText}
