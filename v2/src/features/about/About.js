@@ -19,6 +19,9 @@ const About = () => {
   const abv = initialState.companyInfo.abv;
   const visionText = initialState.companyInfo.vision;
   const missionText = initialState.companyInfo.mission;
+  const contact = initialState.companyInfo.contact;
+  const location = initialState.companyInfo.location;
+  const website = initialState.companyInfo.website;
 
   // Styled components
   const BannerContainer = styled(Box)(({ theme }) => ({
@@ -50,8 +53,9 @@ const About = () => {
   const InfoItem = styled(Box)(({ theme }) => ({
     display: 'flex',
     alignItems: 'center',
-    marginLeft: theme.spacing(15),
-    textAlign: 'left',
+    marginTop: theme.spacing(5),
+    marginLeft: theme.spacing(5),
+    textAlign: 'center',
     color: 'white',
     // Media query for mobile view
     [theme.breakpoints.down('sm')]: {
@@ -64,6 +68,7 @@ const About = () => {
   const IconText = styled(Typography)(({ theme }) => ({
     fontFamily: 'monospace',
     fontSize: '1.2rem',
+    marginTop: theme.spacing(1),
     marginLeft: theme.spacing(1),
     whiteSpace: 'pre-line',
     // Media query for mobile view
@@ -125,20 +130,19 @@ const About = () => {
       <BannerContainer>
       <InfoItem>
         <PhoneIcon sx={{ color: 'limegreen' }} />
-        <IconText>+254-72291029</IconText>
+        <IconText>{contact}</IconText>
       </InfoItem>
 
       <InfoItem>
         <PublicIcon sx={{ color: '#2f7a99' }} />
-        <IconText>www.cebba.ke</IconText>
+        <IconText>{website}</IconText>
       </InfoItem>
 
       <InfoItem>
         <LocationOnIcon sx={{ color: 'red' }} />
         <IconText>
-          Coffee Plaza,
-          Exchange lane-{"\n"}
-          Off haile Selassie Avenue
+            {location}
+            {isMobile ? "\n" : " "}
         </IconText>
       </InfoItem>
     </BannerContainer>
