@@ -13,6 +13,7 @@ import about from "../../assets/about.jpg";
 import Vision from "../../components/section1/Section";
 import Mission from "../../components/section2/Section";
 import Values from "../../components/values/Values";
+import Contact from "../../components/contact/Contact";
 
 const About = () => {
   const theme = useTheme();
@@ -148,6 +149,7 @@ const About = () => {
       </InfoItem>
     </BannerContainer>
     <Values />
+    <Contact />
     </div>
   );
 };
