@@ -51,9 +51,9 @@ const initialState = {
     },
     
     services : [
-        { title: "Agronomy", image: agronomy, descriptions: "" },
-        { title: "Marketing", image: marketing, descriptions: "" },
-        { title: "Quality Control", image: quality, descriptions: ""},
+        { title: "Agronomy", image: agronomy, descriptions: "At CEBBA, we understand that high-quality coffee starts with the best cultivation practices. Our agronomy services are tailored to help coffee farmers optimize their crops and improve their yield quality. We provide expert advice and hands-on support to ensure the long-term health and sustainability of your coffee farm." },
+        { title: "Marketing", image: marketing, descriptions: "At CEBBA, we specialize in connecting premium coffee producers with global buyers. Whether you're sourcing single-origin beans, specialty blends, or looking for dependable supply chains, we serve as your trusted intermediary — ensuring transparency, efficiency, and long-term value.We are proudly licensed by the Capital Markets Authority (CMA) for NCE auction participation and authorized by the Agriculture and Food Authority (AFA) for Direct Sales, enabling us to secure the most competitive deals for our farmers across all channels.Beyond brokering, we provide full post-sale services, including:Generation of detailed sale statementsComprehensive stock summaries These tools empower farmers to monitor their coffee stocks and track earnings with confidence and clarity." } ,
+        { title: "Quality Control", image: quality, descriptions: "We are committed to ensuring that every batch of coffee meets the highest standards of quality. Our comprehensive quality control services are designed to support coffee farmers at every stage of the production process, from cultivation to harvest and post-harvest handling. We provide expert guidance and advanced solutions to ensure that your coffee beans stand out in the competitive market."},
     ]
 };
 
