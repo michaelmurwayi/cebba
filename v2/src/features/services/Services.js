@@ -5,8 +5,10 @@ import service from "../../assets/service.png";
 import Navbar from "../../components/navbar/Navbar";
 import Header from "../../components/header/Header";
 import Service from "../../components/service1/Service";
+import initialState from "../../state/initialState";
 
 const Services = () => {
+    const marketing = initialState.services[1];
     return (
         <div className="services">
             <Navbar />
@@ -14,7 +16,11 @@ const Services = () => {
             title="Our Services"
             bgImage={service}
             />
-            <Service />
+            <Service
+            title={marketing.title}
+            image={marketing.image}
+            descriptions={marketing.descriptions}
+            />
         </div>
     );
 }

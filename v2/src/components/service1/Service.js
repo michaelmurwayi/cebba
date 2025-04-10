@@ -3,11 +3,7 @@ import { Grid, Typography, Box } from "@mui/material";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-import initialState from "../../state/initialState";
-
-const Layout = ({
-  marketing = initialState.services[1],
-}) => {
+const Layout = ({ title, image, descriptions }) => {
   useEffect(() => {
     AOS.init({ duration: 1000, once: true });
   }, []);
@@ -19,7 +15,7 @@ const Layout = ({
         width: "100%",
         margin: 0,
         flexWrap: { xs: "wrap", md: "nowrap" },
-        paddingTop: { xs: 2, md: 2 }, // reduced top spacing
+        paddingTop: { xs: 2, md: 2 },
       }}
     >
       {/* Left column with image */}
@@ -32,7 +28,7 @@ const Layout = ({
           justifyContent: { xs: "center", md: "flex-end" },
           alignItems: "center",
           padding: { xs: "16px", md: "0px" },
-          minHeight: { xs: "50vh", md: "auto" }, // adjusted height
+          minHeight: { xs: "50vh", md: "auto" },
           width: { xs: "100%", md: "50%" },
           flex: { md: "0 0 50%" },
         }}
@@ -40,8 +36,8 @@ const Layout = ({
         <Box
           data-aos="fade-right"
           component="img"
-          src={marketing.image}
-          alt="Introduction Image"
+          src={image}
+          alt="Service Visual"
           sx={{
             width: { xs: "80%", md: "60%" },
             height: { xs: "80%", md: "80%" },
@@ -62,7 +58,6 @@ const Layout = ({
           flexDirection: "column",
           justifyContent: "center",
           padding: { xs: "16px", md: "20px" },
-          minHeight: { xs: "auto", md: "auto" },
           width: { xs: "100%", md: "50%" },
           flex: { md: "0 0 50%" },
         }}
@@ -87,7 +82,7 @@ const Layout = ({
               whiteSpace: "nowrap",
             }}
           >
-            <span style={{ color: "#b87d3f" }}>{marketing.title}</span>
+            <span style={{ color: "#b87d3f" }}>{title}</span>
           </Typography>
         </Box>
 
@@ -100,7 +95,7 @@ const Layout = ({
             lineHeight: 1.6,
           }}
         >
-          {marketing.descriptions}
+          {descriptions}
         </Typography>
       </Grid>
     </Grid>
