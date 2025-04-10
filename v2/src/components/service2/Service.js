@@ -9,99 +9,95 @@ const Layout = ({ title, image, descriptions }) => {
   }, []);
 
   return (
-    <Grid
-      container
-      sx={{
-        width: "100%",
-        margin: 0,
-        flexWrap: { xs: "wrap", md: "nowrap" },
-        paddingTop: { xs: 2, md: 2 },
-        backgroundColor: "#000", // black background
-        color: "#fff", // text color white for contrast
-      }}
-    >
-      {/* Text on the left */}
+    <Box sx={{ width: "100%", backgroundColor: "rgba(0, 0, 0)", color: "#fff" }}>
       <Grid
-        item
-        xs={12}
-        md={6}
+        container
         sx={{
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "center",
-          padding: { xs: "16px", md: "20px" },
-          width: { xs: "100%", md: "50%" },
-          flex: { md: "0 0 50%" },
+          width: "100%",
+          margin: 0,
+          padding: 0,
+          flexWrap: "nowrap", // Prevent wrapping on larger screens
+          flexDirection: { xs: "column", md: "row" }, // Column on mobile, row on desktop
+          alignItems: "center", // Center content vertically
+          justifyContent: "center", // Center content horizontally
+          height: { xs: "auto", md: "80vh" }, // Ensure auto height on mobile and 80vh on desktop
+          gap: { xs: 1, md: 2 }, // Reduce space between grid items
         }}
       >
-        <Box
-          data-aos="fade-down"
+        {/* Text Section */}
+        <Grid
+          item
+          xs={12}
+          md={6}
           sx={{
             display: "flex",
-            alignItems: "center",
-            marginBottom: { xs: 2, md: 3 },
-            flexWrap: { xs: "wrap", md: "nowrap" },
+            flexDirection: "column",
+            justifyContent: "center",
+            alignItems: "center", // Center text horizontally
+            padding: { xs: "50px 1rem", md: 2 }, // Increased top padding for mobile view
+            textAlign: "center", // Center text on mobile as well
+            height: "100%", // Full height for mobile view
           }}
         >
+          <Box data-aos="fade-down" sx={{ textAlign: "center" }}>
+            <Typography
+              variant="h2"
+              sx={{
+                fontSize: { xs: "2rem", sm: "2.5rem", md: "3.5rem", lg: "5rem" },
+                fontWeight: 900,
+                color: "#b87d3f",
+                marginBottom: 2,
+                whiteSpace: "nowrap",
+              }}
+            >
+              {title}
+            </Typography>
+          </Box>
+
           <Typography
-            variant="h2"
+            data-aos="fade-up"
+            variant="body1"
             sx={{
-              fontSize: { xs: "2.2rem", sm: "2.8rem", md: "3.5rem", lg: "5rem" },
-              lineHeight: 1.2,
-              fontWeight: 900,
-              marginRight: { xs: 0, md: 2 },
-              marginBottom: { xs: 1, md: 0 },
-              whiteSpace: "nowrap",
-              color: "#b87d3f",
+              textAlign: "right",
+              fontSize: { xs: "0.95rem", md: "1.25rem", lg: "1.35rem" },
+              lineHeight: 1.6,
             }}
           >
-            {title}
+            {descriptions}
           </Typography>
-        </Box>
+        </Grid>
 
-        <Typography
-          data-aos="fade-up"
-          variant="body1"
+        {/* Image Section */}
+        <Grid
+          item
+          xs={12}
+          md={6}
           sx={{
-            textAlign: "left",
-            fontSize: { xs: "0.95rem", md: "1.25rem", lg: "1.35rem" },
-            lineHeight: 1.6,
+            display: "flex",
+            justifyContent: "center", // Center image horizontally
+            alignItems: "center",
+            padding: { xs: "16px", md: "16px" }, // Adjusted padding for mobile view
+            minHeight: { xs: "50vh", md: "auto" },
+            width: { xs: "100%", md: "50%" },
+            flex: { md: "0 0 50%" },
           }}
         >
-          {descriptions}
-        </Typography>
+          <Box
+            data-aos="fade-left"
+            component="img"
+            src={image}
+            alt="Service Visual"
+            sx={{
+              width: { xs: "80%", md: "60%" }, // Adjust width on mobile and desktop
+              height: { xs: "80%", md: "80%" },
+              maxHeight: "700px",
+              objectFit: "cover",
+              borderRadius: { xs: 0, md: 10 },
+            }}
+          />
+        </Grid>
       </Grid>
-
-      {/* Image on the right */}
-      <Grid
-        item
-        xs={12}
-        md={6}
-        sx={{
-          display: "flex",
-          justifyContent: { xs: "center", md: "flex-start" },
-          alignItems: "center",
-          padding: { xs: "16px", md: "0px" },
-          minHeight: { xs: "50vh", md: "auto" },
-          width: { xs: "100%", md: "50%" },
-          flex: { md: "0 0 50%" },
-        }}
-      >
-        <Box
-          data-aos="fade-left"
-          component="img"
-          src={image}
-          alt="Service Visual"
-          sx={{
-            width: { xs: "80%", md: "60%" },
-            height: { xs: "80%", md: "80%" },
-            maxHeight: "700px",
-            objectFit: "cover",
-            borderRadius: { xs: 0, md: 10 },
-          }}
-        />
-      </Grid>
-    </Grid>
+    </Box>
   );
 };
 
