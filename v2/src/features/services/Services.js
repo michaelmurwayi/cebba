@@ -8,6 +8,7 @@ import Service from "../../components/service1/Service";
 import initialState from "../../state/initialState";
 import Service2 from "../../components/service2/Service";
 import Contact from "../../components/contact/Contact";
+import Footer from "../../components/footer/Footer";
 
 const Services = () => {
     const marketing = initialState.services[1];
@@ -36,6 +37,7 @@ const Services = () => {
             descriptions={quality.descriptions}
             />
             <Contact />
+            <Footer />
         </div>
     );
 }
