@@ -7,10 +7,12 @@ import Header from "../../components/header/Header";
 import Service from "../../components/service1/Service";
 import initialState from "../../state/initialState";
 import Service2 from "../../components/service2/Service";
+import Contact from "../../components/contact/Contact";
 
 const Services = () => {
     const marketing = initialState.services[1];
     const agronomy = initialState.services[0];
+    const quality = initialState.services[2];
     return (
         <div className="services">
             <Navbar />
@@ -28,6 +30,12 @@ const Services = () => {
             image={agronomy.image}
             descriptions={agronomy.descriptions}
             />
+            <Service
+            title={quality.title}
+            image={quality.image}
+            descriptions={quality.descriptions}
+            />
+            <Contact />
         </div>
     );
 }

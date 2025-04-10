@@ -39,7 +39,7 @@ const Layout = ({ title, image, descriptions }) => {
           src={image}
           alt="Service Visual"
           sx={{
-            width: { xs: "80%", md: "60%" },
+            width: { xs: "70%", md: "60%" },
             height: { xs: "80%", md: "80%" },
             maxHeight: "700px",
             objectFit: "cover",
