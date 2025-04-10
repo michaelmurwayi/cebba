@@ -52,7 +52,7 @@ const initialState = {
     
     services : [
         { title: "Agronomy", image: agronomy, descriptions: "" },
-        { title: "Marketing", image: marketing, descriptions: "" },
+        { title: "Marketing", image: marketing, descriptions: "At CEBBA, we specialize in connecting premium coffee producers with global buyers. Whether you're sourcing single-origin beans, specialty blends, or looking for dependable supply chains, we serve as your trusted intermediary — ensuring transparency, efficiency, and long-term value.We are proudly licensed by the Capital Markets Authority (CMA) for NCE auction participation and authorized by the Agriculture and Food Authority (AFA) for Direct Sales, enabling us to secure the most competitive deals for our farmers across all channels.Beyond brokering, we provide full post-sale services, including:Generation of detailed sale statementsComprehensive stock summaries These tools empower farmers to monitor their coffee stocks and track earnings with confidence and clarity." } ,
         { title: "Quality Control", image: quality, descriptions: ""},
     ]
 };
