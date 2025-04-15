@@ -1,4 +1,4 @@
-import Coffee from "../assets/coffee.png";
+import Coffee from "../assets/coffee.jpg";
 import mug from "../assets/intro.jpg"
 import intro from "../assets/beans.jpg";
 import agronomy from "../assets/agronomy.png";

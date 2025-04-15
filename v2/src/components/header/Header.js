@@ -1,6 +1,6 @@
 import React from "react";
 import { Box, Typography } from "@mui/material";
-import "./Header.css"; // Import the CSS file
+import "./Header.css";
 
 const Header = ({
   title = "Default Title",
@@ -23,7 +23,7 @@ const Header = ({
     <Box
       sx={{
         position: "relative",
-        height: "90vh",
+        height: "100vh",
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
@@ -32,10 +32,9 @@ const Header = ({
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
-        backgroundColor: "rgba(0, 0, 0, 1)",
       }}
     >
-      {/* Optional overlay to darken image */}
+      {/* Dark overlay */}
       <Box
         sx={{
           position: "absolute",
@@ -47,6 +46,7 @@ const Header = ({
           zIndex: 0,
         }}
       />
+      {/* Text */}
       <Typography
         variant="h2"
         sx={{
@@ -57,18 +57,15 @@ const Header = ({
           fontWeight: "bold",
           color: "white",
           width: "100%",
-          wordWrap: "break-word",
           textAlign: "center",
         }}
       >
-        <span className="typewriter-text">
-          {words.map((word, index) => (
-            <React.Fragment key={index}>
-              {renderWord(word)}
-              <br />
-            </React.Fragment>
-          ))}
-        </span>
+        {words.map((word, index) => (
+          <React.Fragment key={index}>
+            {renderWord(word)}
+            <br />
+          </React.Fragment>
+        ))}
       </Typography>
     </Box>
   );
