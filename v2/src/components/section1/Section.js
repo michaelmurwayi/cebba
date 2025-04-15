@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import { Box, Grid } from "@mui/material";
 import { GlobalStyles } from "@mui/system";
 
-// Keyframes for the bounce animation
+// Bounce keyframes
 const bounceKeyframes = {
   "0%": { transform: "translateY(0)" },
   "20%": { transform: "translateY(-10px)" },
@@ -18,20 +18,15 @@ const Section = ({ title, highlight, visionText }) => {
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
-        // Set visibility when the element comes into view
         setIsVisible(entry.isIntersecting);
       },
-      { threshold: 0.5 } // Trigger when 50% of the element is in view
+      { threshold: 0.5 }
     );
 
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
-    }
+    if (sectionRef.current) observer.observe(sectionRef.current);
 
     return () => {
-      if (sectionRef.current) {
-        observer.unobserve(sectionRef.current);
-      }
+      if (sectionRef.current) observer.unobserve(sectionRef.current);
     };
   }, []);
 
@@ -39,7 +34,7 @@ const Section = ({ title, highlight, visionText }) => {
     <>
       <GlobalStyles
         styles={{
-          "@keyframes bounce": bounceKeyframes, // Apply bounce keyframes globally
+          "@keyframes bounce": bounceKeyframes,
         }}
       />
 
@@ -49,9 +44,6 @@ const Section = ({ title, highlight, visionText }) => {
           flexGrow: 1,
           px: { xs: 2, md: 4 },
           py: 4,
-          opacity: isVisible ? 1 : 0.5, // Apply opacity change when visible
-          transition: "opacity 2s ease-in-out", // Smooth fade-in effect
-          animation: isVisible ? "bounce 1s linear ease-in-out" : "none", // Trigger bounce animation when visible
         }}
       >
         <Grid container spacing={2} justifyContent="center" alignItems="center">
@@ -73,16 +65,12 @@ const Section = ({ title, highlight, visionText }) => {
                 wordWrap: "break-word",
                 whiteSpace: "normal",
                 flexDirection: "column",
-                opacity: isVisible ? 1 : 0,
-                transition: "opacity 2s ease-in-out", // Smooth fade-in effect
-                animation: isVisible ? "bounce 1s linear ease-in-out" : "none", // Bounce animation for title
+                animation: isVisible ? "bounce 1s ease-in-out" : "none",
               }}
             >
               <span>
                 {title}{" "}
-                <span style={{ color: "rgb(205,127,50)" }}>
-                  {highlight}
-                </span>
+                <span style={{ color: "rgb(205,127,50)" }}>{highlight}</span>
               </span>
             </Box>
           </Grid>
@@ -104,9 +92,7 @@ const Section = ({ title, highlight, visionText }) => {
                 overflow: "auto",
                 overflowWrap: "break-word",
                 whiteSpace: "normal",
-                opacity: isVisible ? 1 : 0,
-                transition: "opacity 2s ease-in-out", // Smooth fade-in effect
-                animation: isVisible ? "bounce 1s linear ease-in-out" : "none", // Bounce animation for vision text
+                animation: isVisible ? "bounce 1s ease-in-out" : "none",
               }}
             >
               {visionText}
