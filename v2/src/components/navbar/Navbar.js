@@ -38,7 +38,7 @@ const Navbar = () => {
                     <img 
                         src={logo}  
                         alt="Company Logo" 
-                        style={{ height: "60px", width: "auto", borderRadius: "15px" }} 
+                        style={{ height: "40px", width: "auto", borderRadius: "0px" }} 
                     />
                 </Box>
 

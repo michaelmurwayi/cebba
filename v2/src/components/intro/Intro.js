@@ -49,7 +49,7 @@ const Layout = ({
             height: { xs: "80%", md: "60%" },
             maxHeight: "700px",
             objectFit: "cover",
-            borderRadius: { xs: 0, md: 20 },
+            borderRadius: { xs: 10, md: 20 },
           }}
         />
       </Grid>
