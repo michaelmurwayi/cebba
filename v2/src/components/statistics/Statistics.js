@@ -4,7 +4,8 @@ import { Grid, Typography, Box, useMediaQuery, useTheme } from "@mui/material";
 const stats = [
   { value: "100,000+", label: "Number of Bags Received", color: "#4CAF50" },
   { value: "1000+", label: "Network of Coffee Farmers", color: "#00BCD4" },
-  { value: "10+", label: "Coffee Grade Variants", color: "#FFFFFF" },
+  { value: "10+", label: "CEBBA Team", color: "#8B5A2B" },
+  { value: "15+", label: "Coffee Grade Variants", color: "#FFFFFF" },
 ];
 
 const StatsSection = () => {

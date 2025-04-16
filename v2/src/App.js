@@ -5,6 +5,7 @@ import About from './features/about/About';
 import Services from './features/services/Services';
 import Contact from './features/contact/Contact';
 import Splash from './components/splash/Splash';
+import ErrorPage from './components/error/Error';
 
 import React, { useState } from 'react';
 
@@ -20,6 +21,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/services" element={<Services />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="*" element={<ErrorPage />} /> 
       </Routes>
     </Router>
   );

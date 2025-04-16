@@ -27,7 +27,7 @@ const ServicesSection = () => {
   return (
     <Box sx={{ textAlign: "center", py: 5, backgroundColor: "#fff", marginTop: 5 }}>
       <Typography
-        variant={isSmallScreen ? "h5" : isMediumScreen ? "h4" : "h3"}
+        variant={isSmallScreen ? "h5" : isMediumScreen ? "h2" : "h2"}
         sx={{ fontWeight: "bold", mb: 3 }}
       >
         OUR <span style={{ color: "#8B5A2B" }}>SERVICES</span>
@@ -76,7 +76,7 @@ const ServicesSection = () => {
                   justifyContent: "center",
                 }}
               >
-                <Typography variant="h6" align="center" sx={{ fontWeight: "bold", color: "#b87333" }}>
+                <Typography variant="h5" align="center" sx={{ fontWeight: "bold", color: "#b87333" }}>
                   {service.title}
                 </Typography>
               </CardContent>
