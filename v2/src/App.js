@@ -6,7 +6,6 @@ import Services from './features/services/Services';
 import Contact from './features/contact/Contact';
 import Splash from './components/splash/Splash';
 import ErrorPage from './components/error/Error';
-
 import React, { useState } from 'react';
 
 function App() {
@@ -15,7 +14,7 @@ function App() {
   return loading ? (
     <Splash onFinish={() => setLoading(false)} />
   ) : (
-    <Router>
+    <Router basename="/cebba"> {/* Replace with your repo name! */}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
@@ -28,4 +27,3 @@ function App() {
 }
 
 export default App;
-
