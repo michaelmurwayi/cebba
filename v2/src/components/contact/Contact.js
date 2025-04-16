@@ -48,7 +48,7 @@ const ContactForm = () => {
             <img
               src={beans}
               alt="Beans"
-              style={{ maxWidth: "100%", maxHeight: "100%" }}
+              style={{ xs:"80%", sm:"50%", md:"50%",  maxWidth: "100%", maxHeight: "100%" }}
             />
           </Box>
 
@@ -100,7 +100,7 @@ const ContactForm = () => {
           <Box
             data-aos="fade-left"
             sx={{
-              width: { xs: "100%", sm: "100%", md: "40%" },
+              width: { xs: "80%", sm: "70%", md: "40%" }, // Balanced width on all devices
               maxWidth: 500,
               p: 4,
               borderRadius: "8px",
@@ -108,6 +108,7 @@ const ContactForm = () => {
               display: "flex",
               flexDirection: "column",
               backgroundColor: "black",
+              mx: "auto", // Center horizontally
             }}
           >
             <TextField
