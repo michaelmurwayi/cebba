@@ -30,6 +30,9 @@ const Home = () => {
       <Header
       title = {companyInfo.name}
       bgImage={HomePage.header.bgImage}
+      number = {companyInfo.contact}
+      location = {companyInfo.location}
+      website = {companyInfo.website}
     />
     <Into />
     <Statistics />  

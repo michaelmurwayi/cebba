@@ -18,13 +18,13 @@ const Layout = ({
     <Grid
       container
       sx={{
-        minHeight: "100vh",
+        minHeight: "80vh",
         width: "100%",
         margin: 0,
         flexWrap: { xs: "wrap", md: "nowrap" },
       }}
     >
-      {/* Left column with image */}
+      {/* Left Image Column */}
       <Grid
         item
         xs={12}
@@ -41,6 +41,7 @@ const Layout = ({
       >
         <Box
           data-aos="fade-right"
+          data-aos-offset="10"  // trigger when ~10% visible
           component="img"
           src={beans}
           alt="Introduction Image"
@@ -54,7 +55,7 @@ const Layout = ({
         />
       </Grid>
 
-      {/* Right column with text */}
+      {/* Right Text Column */}
       <Grid
         item
         xs={12}
@@ -71,6 +72,7 @@ const Layout = ({
       >
         <Box
           data-aos="fade-down"
+          data-aos-offset="10"  // trigger when ~10% visible
           sx={{
             display: "flex",
             alignItems: "center",
@@ -86,7 +88,7 @@ const Layout = ({
               fontWeight: 900,
               marginRight: { xs: 0, md: 2 },
               marginBottom: { xs: 1, md: 0 },
-              whiteSpace: "nowrap", // Prevent wrap
+              whiteSpace: "nowrap",
             }}
           >
             WE ARE <span style={{ color: "#b87d3f" }}>CEBBA</span>
@@ -105,6 +107,7 @@ const Layout = ({
 
         <Typography
           data-aos="fade-up"
+          data-aos-offset="100"  // trigger when ~10% visible
           variant="body1"
           sx={{
             textAlign: "left",

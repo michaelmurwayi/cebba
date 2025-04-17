@@ -16,7 +16,7 @@ const initialState = {
         name: "COFFEE ESTATE BOURGEOISIE BROKERS AGENCY",
         abv: "CEBBA",
         location: "Coffee Plaza,Exchange lane-Off haile Selassie Avenue",
-        contact: "+254 7229 190 29",
+        contact: "0113555333 | 0113555222 | 0722919029",
         website: "www.cebba.ke",
         logo: "",
         slogan: "Experience the Enablers of Elixir Energy",
@@ -41,7 +41,7 @@ const initialState = {
         about: {
             image1: intro,
             image2: mug,
-            text : "Coffee Estates Bourgeoisie Brokers Agency Limited stands as a trailblazer in the coffee brokerage industry, driven by a mission to revolutionize coffee trading with an unwavering focus on farmer-friendly practices, sustainability, and unparalleled quality. By prioritizing the welfare of coffee producers, the agency ensures fair compensation and fosters long-term relationships that empower farmers and enrich local communities. Their sustainable operations are designed to minimize environmental impact while promoting eco-friendly farming techniques, thereby safeguarding the future of coffee cultivation. Committed to quality excellence, Coffee Estates Bourgeoisie Brokers Agency Limited meticulously curates and delivers premium coffee, satisfying even the most discerning palates and setting a new standard in the global coffee trade."
+            text : "At CEBBA we are  driven by the welfare of coffee producers, ensuring fair compensation and fostering sustainable practices that empower farmers and creating wealth for local communities. Our  sustainable operations are designed to drive positive climate outcomes by integrating eco-friendly farming techniques that not only support healthier ecosystems but also ensure the long-term viability of coffee cultivation. Through this commitment, they actively contribute to climate resilience while strengthening local communities and securing a sustainable future for coffee growers worldwide.. Committed to quality excellence, Coffee Estates Bourgeoisie Brokers Agency Limited meticulously curates and delivers premium coffee, satisfying even the most discerning palates and setting a new standard in the global coffee trade."
         },
         statistics:{
             bags: "",
