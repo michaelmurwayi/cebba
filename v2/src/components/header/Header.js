@@ -32,7 +32,7 @@ const Header = ({
     <Box
       sx={{
         position: "relative",
-        height: { xs: "100vh", sm: "100vh", md: "80vh" },
+        height: { xs: "100vh", sm: "100vh", md: "85vh" },
         display: "flex",
         flexDirection: "column",
         justifyContent: "center",
