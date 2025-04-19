@@ -19,6 +19,8 @@ import Footer from "../../components/footer/Footer";
 const About = () => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
+
+  const aboutPage = initialState.AboutPage;
   const abv = initialState.companyInfo.abv;
   const visionText = initialState.companyInfo.vision;
   const missionText = initialState.companyInfo.mission;
@@ -86,8 +88,9 @@ const About = () => {
     <div style={{ overflowX: 'hidden', maxWidth: '100vw' }}>
       <Navbar />
       <Header
-        title="ABOUT CEBBA"
-        bgImage={about}
+        title={aboutPage.header.title}
+        text={aboutPage.header.text}
+        bgImage={aboutPage.header.bgImage}
       />
 
       {/* Optional: Vision Section */}

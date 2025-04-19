@@ -4,6 +4,8 @@ import intro from "../assets/beans.jpg";
 import agronomy from "../assets/agronomy.png";
 import marketing from "../assets/marketing.png";
 import quality from "../assets/quality_control.png";
+import about from "../assets/about.jpg";
+
 
 const initialState = {
     navItems: [
@@ -49,6 +51,13 @@ const initialState = {
             farmers: "",
             gradeVariant: "",
         }   
+    },
+    AboutPage: {
+            header:{
+                title: "ABOUT CEBBA",
+                bgImage: about,
+                text: "CEBBA aspires to bridge the gap between coffee growers and the market, empowering farmers to achieve prosperity and recognition for their work through fairest returns while delivering unparalleled service and excellence to coffee lovers through our partners."
+            }
     },
     
     services : [

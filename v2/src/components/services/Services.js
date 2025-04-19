@@ -80,7 +80,7 @@ const ServicesSection = () => {
                   {service.title}
                 </Typography>
               </CardContent>
-              <Typography variant="body1" align="left" sx={{ color: "#fff" }}>
+              <Typography variant="body1" align="justify-center" sx={{ color: "#fff" }}>
                 {service.subTitile }
               </Typography>
             </Card>

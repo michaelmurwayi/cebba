@@ -12,6 +12,7 @@ import { Box, Typography, Container, Fade } from "@mui/material";
 import slogan from "../../assets/slogan.png";
 import Contact from "../../components/contact/Contact";
 import Footer from "../../components/footer/Footer";
+import Map from "../../components/map/Map";
 
 const Home = () => {
   const { HomePage, companyInfo } = initialState;
@@ -121,15 +122,14 @@ const Home = () => {
                 fontWeight: 500,
               }}
             >
-              We are a pioneering coffee brokerage firm dedicated to transforming
-              the coffee trading landscape through farmer-friendly practices,
-              sustainable operations, and a commitment to quality excellence.
+              CEBBA promotes production and processing strategies that involve minimizing environmental impact throughout the coffee supply chain, from farm to cup. These include using organic fertilizers, adopting regenerative agricultural practises, agroforestry, minimal tillage, and implementing efficient water and waste management systems.
             </Typography>
           </Container>
         </Box>
       </Box>
 
       <Contact />
+      <Map />
       <Footer />
     </div>
   );
