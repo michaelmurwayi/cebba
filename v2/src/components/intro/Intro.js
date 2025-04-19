@@ -6,9 +6,9 @@ import "aos/dist/aos.css";
 import initialState from "../../state/initialState";
 
 const Layout = ({
-  bodyText = initialState.HomePage.about.text,
-  beans = initialState.HomePage.about.image1,
-  mug = initialState.HomePage.about.image2,
+  bodyText, 
+  image1, 
+  image2,
 }) => {
   useEffect(() => {
     AOS.init({ duration: 1000, once: true });
@@ -43,7 +43,7 @@ const Layout = ({
           data-aos="fade-right"
           data-aos-offset="10"  // trigger when ~10% visible
           component="img"
-          src={beans}
+          src={image1}
           alt="Introduction Image"
           sx={{
             width: { xs: "80%", md: "60%" },
@@ -96,7 +96,7 @@ const Layout = ({
 
           <Box
             component="img"
-            src={mug}
+            src={image2}
             alt="CEBBA Logo"
             sx={{
               width: { xs: "70px", md: "100px", lg: "130px" },

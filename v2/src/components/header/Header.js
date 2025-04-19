@@ -6,6 +6,7 @@ import "aos/dist/aos.css";
 
 const Header = ({
   title = "Default Title",
+  text,
   bgImage = "https://images.pexels.com/photos/312418/pexels-photo-312418.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
   number,
   website,
@@ -103,7 +104,7 @@ const Header = ({
             textAlign: "left"
           }}
         >
-          Coffee Estates Bourgeoisie Brokers Agency Limited is a producer-owned coffee brokerage dedicated to empowering small and medium estates, as well as rural factories, in accessing local and global coffee markets. By uniting growers from hard-to-reach regions, CEBBA ensures that producers have direct access to buyers, fair prices, and market opportunities that drive growth, sustainability, and shared success across the coffee value chain.
+          {text}
         </Box>
       </Container>
 

@@ -27,13 +27,13 @@ const ServicesSection = () => {
   return (
     <Box sx={{ textAlign: "center", py: 5, backgroundColor: "#fff", marginTop: 5 }}>
       <Typography
-        variant={isSmallScreen ? "h5" : isMediumScreen ? "h2" : "h2"}
+        variant={isSmallScreen ? "h2" : isMediumScreen ? "h2" : "h2"}
         sx={{ fontWeight: "bold", mb: 3 }}
       >
         OUR <span style={{ color: "#8B5A2B" }}>SERVICES</span>
       </Typography>
 
-      <Grid container spacing={3} justifyContent="center" sx={{ marginTop: 10 }}>
+      <Grid container spacing={3} justifyContent="center" sx={{ marginTop: 0 }}>
         {services.map((service, index) => (
           <Grid
             item
@@ -47,7 +47,7 @@ const ServicesSection = () => {
             <Card
               sx={{
                 width: { xs: "80%", sm: "90%", md: 300 },
-                height: { xs: "auto", sm: 350, md: 400 },
+                height: { xs: "auto", sm: 400, md: 450 },
                 mx: "auto",
                 borderRadius: 3,
                 backgroundColor: "#000",
@@ -80,6 +80,9 @@ const ServicesSection = () => {
                   {service.title}
                 </Typography>
               </CardContent>
+              <Typography variant="body1" align="left" sx={{ color: "#fff" }}>
+                {service.subTitile }
+              </Typography>
             </Card>
           </Grid>
         ))}
