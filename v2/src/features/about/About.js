@@ -91,6 +91,9 @@ const About = () => {
         title={aboutPage.header.title}
         text={aboutPage.header.text}
         bgImage={aboutPage.header.bgImage}
+        number={contact}
+        location={location}
+        website={website}
       />
 
       {/* Optional: Vision Section */}
