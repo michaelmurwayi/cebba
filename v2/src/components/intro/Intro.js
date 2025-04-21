@@ -5,7 +5,7 @@ import "aos/dist/aos.css";
 
 import initialState from "../../state/initialState";
 
-const Layout = ({ bodyText, image1, image2 }) => {
+const Layout = ({ bodyText, image1 }) => {
   useEffect(() => {
     AOS.init({ duration: 1000, once: true });
   }, []);
@@ -14,11 +14,10 @@ const Layout = ({ bodyText, image1, image2 }) => {
     <Grid
       container
       sx={{
-        minHeight: { xs: "auto", md: "100vh" }, // Allow natural height on mobile
         width: "100%",
         margin: 0,
         flexWrap: { xs: "wrap", md: "nowrap" },
-        mb: { xs: 8, md: 0 }, // Extra margin to avoid overlap under next div
+        mb: { xs: 8, md: 0 },
       }}
     >
       {/* Left Image Column */}
@@ -31,18 +30,17 @@ const Layout = ({ bodyText, image1, image2 }) => {
           justifyContent: { xs: "center", md: "flex-end" },
           alignItems: "center",
           padding: { xs: 2, md: 0 },
-          minHeight: { xs: "auto", md: "100vh" },  // Allow text to push the layout on mobile
+          minHeight: { xs: "auto", md: "100vh" }, // no fixed height for mobile
           width: "100%",
         }}
       >
         <Box
           data-aos="fade-right"
-          data-aos-offset="10"
           component="img"
           src={image1}
           alt="Introduction Image"
           sx={{
-            width: { xs: "90%", sm: "85%", md: "60%" },
+            width: { xs: "95%", sm: "85%", md: "60%" },
             height: "auto",
             maxHeight: "700px",
             objectFit: "cover",
@@ -63,14 +61,13 @@ const Layout = ({ bodyText, image1, image2 }) => {
           justifyContent: { xs: "flex-start", md: "center" },
           alignItems: { xs: "center", md: "flex-start" },
           padding: { xs: 3, sm: 4, md: 6 },
-          minHeight: { xs: "auto", md: "100vh" },
+          minHeight: { xs: "auto", md: "100vh" },  // auto on mobile, fill on desktop
           width: "100%",
           textAlign: { xs: "center", md: "left" },
         }}
       >
         <Box
           data-aos="fade-down"
-          data-aos-offset="10"
           sx={{
             display: "flex",
             alignItems: "center",
@@ -82,7 +79,7 @@ const Layout = ({ bodyText, image1, image2 }) => {
           <Typography
             variant="h2"
             sx={{
-              fontSize: { xs: "2.2rem", sm: "2.8rem", md: "3.5rem", lg: "5rem" },
+              fontSize: { xs: "2rem", sm: "2.8rem", md: "3.5rem", lg: "5rem" },
               lineHeight: 1.2,
               fontWeight: 900,
               marginRight: { xs: 0, md: 2 },
@@ -95,7 +92,6 @@ const Layout = ({ bodyText, image1, image2 }) => {
 
         <Typography
           data-aos="fade-up"
-          data-aos-offset="100"
           variant="body1"
           sx={{
             fontSize: { xs: "1rem", sm: "1.1rem", md: "1.25rem", lg: "1.35rem" },

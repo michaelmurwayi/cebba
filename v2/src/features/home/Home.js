@@ -70,7 +70,8 @@ const Home = () => {
           position: "relative",
           width: "100%",
           overflow: "hidden",
-          minHeight: "90vh",
+          height: { xs: "190vh", sm: "auto", md: "100vh" },
+
         }}
       >
         {introSlides.map((slide, index) => (
