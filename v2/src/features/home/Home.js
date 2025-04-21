@@ -47,7 +47,7 @@ const Home = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setActiveIndex(prev => (prev + 1) % introSlides.length);
-    }, 8000);  // Smooth interval longer than fade for cleaner effect
+    }, 8000);
     return () => clearInterval(interval);
   }, [introSlides.length]);
 
@@ -69,7 +69,7 @@ const Home = () => {
           position: "relative",
           width: "100%",
           overflow: "hidden",
-          minHeight: "90vh",  // let it expand naturally, but prevents it from being too small
+          minHeight: "90vh",
         }}
       >
         {introSlides.map((slide, index) => (
@@ -96,38 +96,36 @@ const Home = () => {
       <Statistics />
       <Service />
 
+      {/* Background Image Section with Text */}
       <Box sx={{ width: "100%" }}>
-        {/* Background Image Section */}
         <Box
           sx={{
             height: { xs: 250, sm: 350, md: 400 },
             backgroundImage: `url(${slogan})`,
             backgroundSize: "cover",
-            backgroundColor: "rgba(0, 0, 0, 1)",
             backgroundPosition: "center",
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
             textAlign: "center",
             color: "white",
+            px: { xs: 2, sm: 4 }, // Padding for side space on mobile
           }}
         >
-         <Typography
+          <Typography
             variant="h4"
             sx={{
-              fontSize: { xs: "1.2rem", sm: "1.6rem", md: "1.8rem" },
-              fontWeight: 0,
+              fontSize: { xs: "1rem", sm: "1.4rem", md: "1.8rem" },
+              fontWeight: 300,
               textTransform: "none",
-              letterSpacing: "0.5px",
-              textAlign: "center",
-              color: "white",
-              lineHeight: 1.6,
-              maxWidth: "80vw",
+              letterSpacing: "0.3px",
+              lineHeight: 1.2,
+              maxWidth: { xs: "90vw", sm: "80vw", md: "700px" },
               margin: "0 auto",
             }}
           >
             Kenyan coffee, especially the{" "}
-            <Box component="span" sx={{ color: "#b87d3f", fontWeight: "100" }}>
+            <Box component="span" sx={{ color: "#b87d3f", fontWeight: "bold" }}>
               AA grade
             </Box>
             , is known for its large bean size, distinct flavour, and bright acidity.
@@ -140,7 +138,6 @@ const Home = () => {
             </Box>{" "}
             — are also available.
           </Typography>
-
         </Box>
 
         {/* Description Section */}
@@ -151,17 +148,19 @@ const Home = () => {
             px: { xs: 2, sm: 4 },
           }}
         >
-          <Container maxWidth="md">
+          <Container maxWidth="lg">
             <Typography
               variant="body1"
               sx={{
                 textAlign: "left",
-                fontSize: { xs: "1rem", sm: "1.1rem", md: "1.2rem", lg: "1.6rem" },
-                fontWeight: 500,
+                fontSize: { xs: "0.95rem", sm: "1.1rem", md: "1.3rem", lg: "1.6rem" },
+                fontWeight: 400,
+                lineHeight: { xs: 1.8, sm: 2 },
               }}
             >
               CEBBA promotes production and processing strategies that involve minimizing
-              environmental impact throughout the coffee supply chain, from farm to cup. These include using organic fertilizers, adopting regenerative agricultural practices, agroforestry, minimal tillage, and implementing efficient water and waste management systems.
+              environmental impact throughout the coffee supply chain, from farm to cup.
+              These include using organic fertilizers, adopting regenerative agricultural practices, agroforestry, minimal tillage, and implementing efficient water and waste management systems.
             </Typography>
           </Container>
         </Box>
