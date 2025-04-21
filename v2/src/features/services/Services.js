@@ -12,9 +12,10 @@ import Footer from "../../components/footer/Footer";
 
 const Services = () => {
     const servicePage = initialState.ServicePage
-    const marketing = initialState.services[1];
     const agronomy = initialState.services[0];
-    const quality = initialState.services[2];
+    const advocacy = initialState.services[1];
+    const marketing = initialState.services[2];
+    const quality = initialState.services[3];
     const contact = initialState.companyInfo.contact;
     const location = initialState.companyInfo.location;
     const website = initialState.companyInfo.website;
@@ -30,21 +31,27 @@ const Services = () => {
             website={website}
             />
             <Service
+            title={agronomy.title}
+            image={agronomy.image}
+            descriptions={agronomy.descriptions}
+            />
+            <Service2
+            title={advocacy.title}
+            image={advocacy.image}
+            descriptions={advocacy.descriptions}
+            />
+            <Service
             title={marketing.title}
             image={marketing.image}
             descriptions={marketing.descriptions}
             />
             <Service2
-            title={agronomy.title}
-            image={agronomy.image}
-            descriptions={agronomy.descriptions}
-            />
-            <Service
             title={quality.title}
             image={quality.image}
             descriptions={quality.descriptions}
             />
             <Contact />
+
             <Footer />
         </div>
     );

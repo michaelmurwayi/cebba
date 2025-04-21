@@ -14,6 +14,7 @@ import Contact from "../../components/contact/Contact";
 import Footer from "../../components/footer/Footer";
 import Map from "../../components/map/Map";
 import Intro2 from "../../components/intro/Intro2";
+import MissionVision from "../../components/missionVision/Section";
 
 const Home = () => {
   const { HomePage, companyInfo } = initialState;
@@ -92,8 +93,8 @@ const Home = () => {
           </Fade>
         ))}
       </Box>
-
       <Statistics />
+      <MissionVision />
       <Service />
 
       {/* Background Image Section with Text */}

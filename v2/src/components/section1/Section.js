@@ -90,7 +90,7 @@ const Section = ({ title, highlight, visionText }) => {
               fontSize: { xs: "1rem", sm: "1.2rem", md: "1.8rem" },
               textAlign: "justify",
               py: 3,  // increased vertical padding
-              px: 4,  // increased horizontal padding for side space
+              px: { xs: 0, sm: 0, md: 2 },  // increased horizontal padding for side space
               lineHeight: 1.8,  // added line spacing
               overflow: "auto",
               overflowWrap: "break-word",

@@ -27,6 +27,10 @@ const initialState = {
         mission: "A coffee brokerage agency dedicated to the promotion of environmental sustainability, sustainable regenerative farmer-friendly practices to produce the highest quality cup to coffee lovers and enthusiasts."
 
     },
+    missionVision:[
+        {title: "Vision", text: "To be the leading coffee brokerage agency globally, renowned for our total dedication to quality excellence by putting the producer at the centre of production, processing, marketing, and consumption of coffee globally."}, 
+        {title: "Mission", text: "A coffee brokerage agency dedicated to the promotion of environmental sustainability, sustainable regenerative farmer-friendly practices to produce the highest quality cup to coffee lovers and enthusiasts."},
+    ],
     stats : [
         { value: "100,000+", label: "Number of Bags Received", color: "#4CAF50" },
         { value: "1000+", label: "Network of Coffee Farmers", color: "#00BCD4" },
@@ -82,8 +86,16 @@ const initialState = {
         header:{
             title: "Our Services",
             bgImage: about,
-            text: "CEBBA aspires to bridge the gap between coffee growers and the market, empowering farmers to achieve prosperity and recognition for their work through fairest returns while delivering unparalleled service and excellence to coffee lovers through our partners."
+            text: "At CEBBA, we are dedicated to empowering coffee producers and businesses through a comprehensive suite of services designed to unlock growth and guarantee quality at every stage of the coffee value chain.From agronomy support that nurtures sustainable farming practices, to policy advocacy that champions a favorable regulatory environment — we walk alongside farmers, cooperatives, and buyers to ensure success in a competitive market."
         }
+    },
+    ContactPage: {
+        header:{
+            title: "Contact Us",
+            bgImage: about,
+            text: "Whether you're a coffee producer, buyer, partner, or simply curious about our services — we’re here to help! At CEBBA, we believe strong connections are the foundation of successful collaborations.Reach out to our team for expert guidance, partnership opportunities, or support on your coffee journey. We're always ready to provide personalized assistance, ensuring your questions are answered and your needs are met.Let’s start the conversation — your next great coffee solution begins here."
+        },
+        
     },
     regions:{
         central: {
