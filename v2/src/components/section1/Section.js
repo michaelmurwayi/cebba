@@ -61,6 +61,7 @@ const Section = ({ title, highlight, visionText }) => {
                 py: 2,
                 color: "black",
                 fontSize: { xs: "1.8rem", sm: "2.5rem", md: "4.5rem" },
+                fontWeight: 900,
                 borderRadius: 2,
                 wordWrap: "break-word",
                 whiteSpace: "normal",
@@ -77,26 +78,30 @@ const Section = ({ title, highlight, visionText }) => {
 
           {/* Right Box: Vision Text */}
           <Grid item xs={12} md="auto">
-            <Box
-              sx={{
-                width: { xs: "100%", sm: "100%", md: 700 },
-                height: { xs: 300, sm: 400, md: 600 },
-                backgroundColor: "#D9D9D9",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                color: "black",
-                fontSize: { xs: "1rem", sm: "1.2rem", md: "1.8rem" },
-                textAlign: "center",
-                py: 2,
-                overflow: "auto",
-                overflowWrap: "break-word",
-                whiteSpace: "normal",
-                animation: isVisible ? "bounce 1s ease-in-out" : "none",
-              }}
-            >
-              {visionText}
-            </Box>
+          <Box
+            sx={{
+              width: { xs: "100%", sm: "100%", md: 700 },
+              height: { xs: 300, sm: 400, md: 400 },
+              backgroundColor: "rgba(0, 0, 0, 0.9)",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              color: "white",
+              fontSize: { xs: "1rem", sm: "1.2rem", md: "1.8rem" },
+              textAlign: "justify",
+              py: 3,  // increased vertical padding
+              px: 4,  // increased horizontal padding for side space
+              lineHeight: 1.8,  // added line spacing
+              overflow: "auto",
+              overflowWrap: "break-word",
+              whiteSpace: "normal",
+              animation: isVisible ? "bounce 1s ease-in-out" : "none",
+              borderRadius: 2,
+            }}
+          >
+            {visionText}
+          </Box>
+
           </Grid>
         </Grid>
       </Box>

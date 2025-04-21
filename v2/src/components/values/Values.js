@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Card, CardContent, Typography, Grid } from '@mui/material';
 import { GlobalStyles } from '@mui/system';
 import Values from '../../assets/values.jpg'; // Assuming the image is in the assets folder
+import Map from '../../components/map/Map'; // Assuming you have a Map component
 
 const ValuesDisplay = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -39,7 +40,7 @@ const ValuesDisplay = () => {
         }}
       />
 
-      <Grid container justifyContent="center" alignItems="center" style={{ minHeight: '90vh', backgroundColor: '#f5f5f5' }}>
+      <Grid container justifyContent="center" alignItems="center" style={{ minHeight: '90vh', backgroundColor: 'white' }}>
         <Grid item xs={11} md={8} ref={sectionRef}>
           <Typography variant="h4" align="center" gutterBottom sx={{ fontWeight: 'bold' }}>
             Our <Typography variant='h4' component="span" sx={{ color: '#CD7F32', fontWeight: 'bold' }}>Values</Typography>

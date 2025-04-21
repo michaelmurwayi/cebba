@@ -15,6 +15,8 @@ import Mission from "../../components/section2/Section";
 import Values from "../../components/values/Values";
 import Contact from "../../components/contact/Contact";
 import Footer from "../../components/footer/Footer";
+import Map from '../../components/map/Map'; // Assuming you have a Map component
+
 
 const About = () => {
   const theme = useTheme();
@@ -157,6 +159,7 @@ const About = () => {
     </BannerContainer>
     <Values />
     <Contact />
+    <Map />
     <Footer />
     </div>
   );

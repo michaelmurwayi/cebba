@@ -112,17 +112,35 @@ const Home = () => {
             color: "white",
           }}
         >
-          <Typography
+         <Typography
             variant="h4"
             sx={{
-              fontSize: { xs: "1.5rem", sm: "2rem", md: "2.5rem" },
-              fontWeight: 500,
-              textTransform: "uppercase",
-              letterSpacing: 2,
+              fontSize: { xs: "1.2rem", sm: "1.6rem", md: "1.8rem" },
+              fontWeight: 0,
+              textTransform: "none",
+              letterSpacing: "0.5px",
+              textAlign: "center",
+              color: "white",
+              lineHeight: 1.6,
+              maxWidth: "80vw",
+              margin: "0 auto",
             }}
           >
-            {companyInfo.slogan}
+            Kenyan coffee, especially the{" "}
+            <Box component="span" sx={{ color: "#b87d3f", fontWeight: "100" }}>
+              AA grade
+            </Box>
+            , is known for its large bean size, distinct flavour, and bright acidity.
+            <br />
+            It’s often described as having notes of blackcurrant, citrus, and wine.
+            <br />
+            The AA grade is Kenya’s flagship, but other high-quality primary grades —{" "}
+            <Box component="span" sx={{ color: "#b87d3f", fontWeight: 500 }}>
+              E, AB, PB, C, T, TT, MH, ML
+            </Box>{" "}
+            — are also available.
           </Typography>
+
         </Box>
 
         {/* Description Section */}
@@ -137,7 +155,7 @@ const Home = () => {
             <Typography
               variant="body1"
               sx={{
-                textAlign: "center",
+                textAlign: "left",
                 fontSize: { xs: "1rem", sm: "1.1rem", md: "1.2rem", lg: "1.6rem" },
                 fontWeight: 500,
               }}

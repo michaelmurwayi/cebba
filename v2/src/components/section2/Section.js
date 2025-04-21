@@ -67,26 +67,30 @@ const Section = () => {
           
           {/* Left Box: Vision Text */}
           <Grid item xs={12} md="auto">
-            <Box
-              sx={{
-                width: { xs: "100%", sm: "100%", md: 700 },
-                height: { xs: 300, sm: 400, md: 600 },
-                backgroundColor: "#D9D9D9",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                color: "black",
-                fontSize: { xs: "1rem", sm: "1.2rem", md: "1.8rem" },
-                textAlign: "center",
-                py: 2,
-                overflow: "auto",
-                overflowWrap: "break-word",
-                whiteSpace: "normal",
-                animation: isVisible ? "bounce 1s ease-out" : "none", // Bounce animation when visible
-              }}
-            >
-              {companyInfo.mission}
-            </Box>
+              <Box
+                sx={{
+                  width: { xs: "100%", sm: "100%", md: 700 },
+                  height: { xs: 300, sm: 400, md: 400 },
+                  backgroundColor: "rgba(0, 0, 0, 0.9)",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  color: "white",
+                  fontSize: { xs: "1rem", sm: "1.2rem", md: "1.8rem" },
+                  textAlign: "justify",
+                  py: 3,  // increased vertical padding
+                  px: 3,  // increased horizontal padding for side space
+                  lineHeight: 1.8,  // added line spacing
+                  overflow: "auto",
+                  overflowWrap: "break-word",
+                  whiteSpace: "normal",
+                  animation: isVisible ? "bounce 1s ease-in-out" : "none",
+                  borderRadius: 2,
+                }}
+              >
+                {companyInfo.mission}
+              </Box>
+    
           </Grid>
 
           {/* Right Box: Title (hidden on mobile) */}
@@ -96,6 +100,7 @@ const Section = () => {
                 sx={{
                   width: { xs: "100%", sm: "100%", md: 300 },
                   height: { xs: "auto", md: 600 },
+                  fontWeight: 900,
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
