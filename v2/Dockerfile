@@ -1,34 +1,36 @@
-# Step 1: Build React App
-FROM node:20-alpine AS build
+# ---- Step 1: Build React App ----
+FROM node:20-alpine AS builder
 
 WORKDIR /app
 
-# Copy package.json and package-lock.json (or yarn.lock)
+# Only copy the package.json and lock file first
 COPY package*.json ./
 
 # Install dependencies
-RUN npm install
+RUN npm ci --legacy-peer-deps
 
-# Copy the rest of the project
+# Copy the rest of the source code
 COPY . .
 
-# Build the React app
+# Build the React production bundle
 RUN npm run build
 
-# Step 2: Serve with NGINX
-FROM nginx:alpine
 
-# Remove the default NGINX static assets
+# ---- Step 2: Serve with NGINX ----
+FROM nginx:stable-alpine
+
+# Remove default NGINX website
 RUN rm -rf /usr/share/nginx/html/*
 
-# Copy build output from the previous stage
-COPY --from=build /app/build /usr/share/nginx/html
+# Copy the React build from the builder stage
+COPY --from=builder /app/build /usr/share/nginx/html
 
-# Copy a custom nginx config (optional, for better SPA routing)
+# If you have a custom nginx.conf for SPA fallback, use this:
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 
-# Expose port 80
+# Expose HTTP
 EXPOSE 80
 
-# Start NGINX
+# Run NGINX in foreground
 CMD ["nginx", "-g", "daemon off;"]
+    
