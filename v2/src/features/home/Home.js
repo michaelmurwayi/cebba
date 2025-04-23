@@ -152,6 +152,7 @@ const Home = () => {
         >
           <Container maxWidth="lg">
           <Typography
+<<<<<<< HEAD
             variant="body1"
             sx={{
               textAlign: "left",
@@ -169,6 +170,25 @@ const Home = () => {
               <li><strong>Efficient water and waste management systems</strong></li>
             </ul>
           </Typography>
+=======
+              variant="body1"
+              sx={{
+                textAlign: "left",
+                fontSize: { xs: "0.95rem", sm: "1.1rem", md: "1.3rem", lg: "1.6rem" },
+                fontWeight: 400,
+                lineHeight: { xs: 1.8, sm: 2 },
+              }}
+            >
+              CEBBA promotes environmentally conscious strategies throughout the coffee supply chain—from farm to cup. This includes:
+              <ul style={{ marginTop: 8, paddingLeft: "1.2em" }}>
+                <li><strong>Use of organic fertilizers</strong></li>
+                <li><strong>Regenerative agriculture</strong></li>
+                <li><strong>Agroforestry</strong></li>
+                <li><strong>Minimal tillage practices</strong></li>
+                <li><strong>Efficient water and waste management systems</strong></li>
+              </ul>
+            </Typography>
+>>>>>>> main
 
           </Container>
         </Box>

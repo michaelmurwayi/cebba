@@ -56,7 +56,7 @@ const initialState = {
             image1: intro,
             image2: mug,
             title: "SOURCED FROM ALL REGIONS",
-            text : "CEBBA offers the full spectrum of Kenya’s unique coffee profiles by sourcing directly from all major coffee-growing regions across the country. Each region imparts distinct flavors shaped by altitude, climate, and soil composition.",
+            text : "CEBBA sources directly from all major coffee-growing regions across the country CEBBA sources from all regions of Kenya, offering the full spectrum of Kenyan coffee characteristics:",
             regions: [
 
             ]
@@ -99,23 +99,23 @@ const initialState = {
     },
     regions:{
         central: {
-            name: "Nyeri",
-            description: "Nyeri is known for its high-altitude coffee farms, producing beans with bright acidity and complex flavors. The region's volcanic soil and favorable climate contribute to the unique taste profiles of its coffee.",
+            name: "Central and South Regions",
+            description: "(high altitudes, volcanic soils): Full-bodied, vibrant acidity, complex flavors (citrus, berries)",
             image: "",
         },
         western: {
             name: "Western and Nyanza Kenya",
-            description: "with its lower altitudes and wetter climate, yields coffees with softer acidity and more delicate floral and citrus notes. ",
+            description: "Softer acidity, delicate floral and citrus notes due to lower altitudes and wetter climate",
             image: "",
         },
         rift: {
             name: "North Rift Region",
-            description: "has a wide range of medium to high altitudes, which translates to coffee profiles ranging from Citrus lime, grapefruit, and light strawberry",
+            description: "Medium to high altitudes, flavor notes include citrus lime, grapefruit, and light strawberry",
             image: "",
         },
         eastern: {
-            name: "Eastern Region",
-            description: "is known for its high-quality Arabica coffee, characterized by bright acidity and fruity flavors. The region's unique microclimates and rich volcanic soils contribute to the distinct taste profiles of its coffee.",
+            name: "Upper and Lower Eastern Regions",
+            description: "Medium to low altitudes, known for distinct blackcurrant fragrance",
             image: "",
         },
     }
