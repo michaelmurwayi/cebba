@@ -23,13 +23,13 @@ const initialState = {
         website: "www.cebba.ke",
         logo: "",
         slogan: "Experience the Enablers of Elixir Energy",
-        vision: "To be the leading coffee brokerage agency globally, renowned for our total dedication to quality excellence by putting the producer at the centre of production, processing, marketing, and consumption of coffee globally.",
+        vision: "To become the leading global coffee brokerage agency, recognized for unwavering commitment to quality, and for placing the producer at the heart of production, processing, marketing, and global consumption.",
         mission: "A coffee brokerage agency dedicated to the promotion of environmental sustainability, sustainable regenerative farmer-friendly practices to produce the highest quality cup to coffee lovers and enthusiasts."
 
     },
     missionVision:[
-        {title: "Vision", text: "To be the leading coffee brokerage agency globally, renowned for our total dedication to quality excellence by putting the producer at the centre of production, processing, marketing, and consumption of coffee globally."}, 
-        {title: "Mission", text: "A coffee brokerage agency dedicated to the promotion of environmental sustainability, sustainable regenerative farmer-friendly practices to produce the highest quality cup to coffee lovers and enthusiasts."},
+        {title: "Vision", text: "To become the leading global coffee brokerage agency, recognized for unwavering commitment to quality, and for placing the producer at the heart of production, processing, marketing, and global consumption."}, 
+        {title: "Mission", text: "To be a coffee brokerage agency that promotes environmental sustainability and regenerative, farmer-friendly practices to deliver the highest-quality coffee to enthusiasts and lovers around the world."},
     ],
     stats : [
         { value: "100,000+", label: "Number of Bags Received", color: "#4CAF50" },
@@ -44,7 +44,7 @@ const initialState = {
     HomePage: {
         header:{
             bgImage: Coffee,
-            text: "The Coffee Estates' Bourgeoisie Brokers Agency Limited (CEBBA) was established by coffee producers to champion the clamour for fair returns from the 'farm  to coffee cup' by all players in the Kenya coffee value chain.Top on the list in this journey is climate resilience, sustainable production practices, sourcing, supply chain, and market access. CEBBA draws its membership from Kenya small and medium-sized coffee estates and emerging Coffee Cooperative Societies from new coffee growing regions across all 33 coffee-producing counties in Kenya."
+            text: "The Coffee Estates' Bourgeoisie Brokers Agency Limited (CEBBA) was established by coffee producers to advocate for fair returns across the entire Kenyan coffee value chain—from the farm to the coffee cup.At the core of this mission are priorities such as climate resilience, sustainable production practices, ethical sourcing, supply chain efficiency, and equitable market access.CEBBA’s membership comprises small and medium-sized coffee estates and emerging Coffee Cooperative Societies from all 33 coffee-growing counties in Kenya, including new coffee-producing regions.Rooted in a farmer-centered philosophy, CEBBA is committed to safeguarding the interests of all stakeholders"
         },
         about: {
             title: "ABOUT CEBBA",
