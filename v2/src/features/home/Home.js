@@ -151,7 +151,7 @@ const Home = () => {
           }}
         >
           <Container maxWidth="lg">
-            <Typography
+          <Typography
               variant="body1"
               sx={{
                 textAlign: "left",
@@ -160,10 +160,16 @@ const Home = () => {
                 lineHeight: { xs: 1.8, sm: 2 },
               }}
             >
-              CEBBA promotes production and processing strategies that involve minimizing
-              environmental impact throughout the coffee supply chain, from farm to cup.
-              These include using organic fertilizers, adopting regenerative agricultural practices, agroforestry, minimal tillage, and implementing efficient water and waste management systems.
+              CEBBA promotes environmentally conscious strategies throughout the coffee supply chain—from farm to cup. This includes:
+              <ul style={{ marginTop: 8, paddingLeft: "1.2em" }}>
+                <li><strong>Use of organic fertilizers</strong></li>
+                <li><strong>Regenerative agriculture</strong></li>
+                <li><strong>Agroforestry</strong></li>
+                <li><strong>Minimal tillage practices</strong></li>
+                <li><strong>Efficient water and waste management systems</strong></li>
+              </ul>
             </Typography>
+
           </Container>
         </Box>
       </Box>
