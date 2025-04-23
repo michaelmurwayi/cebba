@@ -1,0 +1,32 @@
+{
+  "files": {
+    "main.css": "/cebba/static/css/main.afeb19ed.css",
+    "main.js": "/cebba/static/js/main.a6e4035b.js",
+    "static/js/453.d755639a.chunk.js": "/cebba/static/js/453.d755639a.chunk.js",
+    "static/media/splash.gif": "/cebba/static/media/splash.6f480ba582a5e1552931.gif",
+    "static/media/about.jpg": "/cebba/static/media/about.92fc9caa914204a882ad.jpg",
+    "static/media/beans.jpg": "/cebba/static/media/beans.9f123c25124cd5b2ae6b.jpg",
+    "static/media/slogan.png": "/cebba/static/media/slogan.c287b59e087ddd2b4053.png",
+    "static/media/values.jpg": "/cebba/static/media/values.30b15fb7e3d59620149d.jpg",
+    "static/media/marketing.png": "/cebba/static/media/marketing.68f0518ce037d34e9c80.png",
+    "static/media/service.png": "/cebba/static/media/service.9320e1fd9c425ffbf8fb.png",
+    "static/media/beans.png": "/cebba/static/media/beans.8958b1e2f589878e5ede.png",
+    "static/media/logo.png": "/cebba/static/media/logo.29ae8f47c6ab91c057c4.png",
+    "static/media/quality_control.png": "/cebba/static/media/quality_control.400a6010029821d01d79.png",
+    "static/media/region.png": "/cebba/static/media/region.2f6cea523723751666a1.png",
+    "static/media/coffee.jpg": "/cebba/static/media/coffee.362e6cca52dc1d0a4e8c.jpg",
+    "static/media/agronomy.png": "/cebba/static/media/agronomy.24ecff4c764dbbc553f2.png",
+    "static/media/advocacy.jpg": "/cebba/static/media/advocacy.29e85d5111f0c0723222.jpg",
+    "static/media/contact.jpg": "/cebba/static/media/contact.5200967b0f49268463c6.jpg",
+    "static/media/intro.jpg": "/cebba/static/media/intro.82bfb255fbc82abb441c.jpg",
+    "static/media/error.jpeg": "/cebba/static/media/error.a862153dcf7279df23ed.jpeg",
+    "index.html": "/cebba/index.html",
+    "main.afeb19ed.css.map": "/cebba/static/css/main.afeb19ed.css.map",
+    "main.a6e4035b.js.map": "/cebba/static/js/main.a6e4035b.js.map",
+    "453.d755639a.chunk.js.map": "/cebba/static/js/453.d755639a.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.afeb19ed.css",
+    "static/js/main.a6e4035b.js"
+  ]
+}
