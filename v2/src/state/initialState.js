@@ -6,6 +6,7 @@ import marketing from "../assets/marketing.png";
 import quality from "../assets/quality_control.png";
 import about from "../assets/about.jpg";
 import advocacy from "../assets/advocacy.jpg";
+import contact from "../assets/contact.jpg";
 
 
 const initialState = {
@@ -92,7 +93,7 @@ const initialState = {
     ContactPage: {
         header:{
             title: "Contact Us",
-            bgImage: about,
+            bgImage: contact,
             text: "Whether you're a coffee producer, buyer, partner, or simply curious about our services — we’re here to help! At CEBBA, we believe strong connections are the foundation of successful collaborations.Reach out to our team for expert guidance, partnership opportunities, or support on your coffee journey. We're always ready to provide personalized assistance, ensuring your questions are answered and your needs are met.Let’s start the conversation — your next great coffee solution begins here."
         },
         
